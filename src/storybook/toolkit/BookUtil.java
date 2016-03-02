@@ -210,6 +210,7 @@ public class BookUtil {
 		H2FileFilter filter = new H2FileFilter();
 		fc.addChoosableFileFilter(filter);
 		fc.setFileFilter(filter);
+		fc.setAcceptAllFileFilterUsed(false);
 		int ret = fc.showOpenDialog(null);
 		if (ret == JFileChooser.APPROVE_OPTION) {
 			File file = fc.getSelectedFile();
@@ -217,6 +218,20 @@ public class BookUtil {
 				JOptionPane.showMessageDialog(null,
 						I18N.getMsg("msg.dlg.project.not.exits.text", file),
 						I18N.getMsg("msg.dlg.project.not.exits.title"),
+						JOptionPane.ERROR_MESSAGE);
+				return null;		
+			}
+			String extension ="";
+			
+			String fileString = file.toString();
+			int i = fileString.lastIndexOf('.');
+			if (i > 0) {
+			    extension = fileString.substring(i+1);
+			}
+			if (!extension.equals("db")){
+				JOptionPane.showMessageDialog(null,
+						"Invalid file type. Must be a H2 Database File",
+						"Invalid file type",
 						JOptionPane.ERROR_MESSAGE);
 				return null;
 			}
