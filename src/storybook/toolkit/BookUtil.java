@@ -228,7 +228,7 @@ public class BookUtil {
 			if (i > 0) {
 			    extension = fileString.substring(i+1);
 			}
-			if (!extension.equals("db")){
+			if (extension != "db"){
 				JOptionPane.showMessageDialog(null,
 						"Invalid file type. Must be a H2 Database File",
 						"Invalid file type",
