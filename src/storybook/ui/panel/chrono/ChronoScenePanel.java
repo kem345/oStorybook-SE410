@@ -23,7 +23,11 @@ import java.awt.Dimension;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 import java.beans.PropertyChangeEvent;
+import java.sql.Timestamp;
 import java.text.DateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -32,11 +36,16 @@ import javax.swing.ScrollPaneConstants;
 import javax.swing.SwingConstants;
 import javax.swing.text.JTextComponent;
 
+import org.hibernate.Session;
+
 import storybook.SbConstants;
 import storybook.SbConstants.BookKey;
 import storybook.action.EditEntityAction;
 import storybook.controller.BookController;
+import storybook.model.BookModel;
 import storybook.model.EntityUtil;
+import storybook.model.hbn.dao.SceneDAO;
+import storybook.model.hbn.dao.SceneDAOImpl;
 import storybook.model.hbn.entity.Internal;
 import storybook.model.hbn.entity.Scene;
 import storybook.toolkit.DateUtil;
@@ -207,6 +216,29 @@ public class ChronoScenePanel extends AbstractScenePanel implements FocusListene
 			if (!DateUtil.isZeroTimeDate(scene.getSceneTs())) {
 				DateFormat formatter = I18N.getDateTimeFormatter();
 				lbTime.setText(formatter.format(scene.getSceneTs()));
+			}
+		} else {
+			// Add the date of scenes with relative dates to the panel
+			if(scene.hasRelativeScene()) {
+				BookModel model = mainFrame.getBookModel();
+				Session session = model.beginTransaction();
+				SceneDAOImpl dao = new SceneDAOImpl(session);
+				// Get all scenes from the book
+				List<Scene> allScenes = dao.findAll();
+				session.close();
+				// Create the timestamp for the relative date
+				Timestamp ts = new Timestamp(0);
+				// Go through all scenes and find the one that matches the realtive ID
+				for(Scene s : allScenes) {
+					if(s.getId() == scene.getRelativeSceneId()) 
+						ts = s.getSceneTs();
+				}
+				DateFormat formatter = I18N.getDateTimeFormatter();
+				Calendar cal = Calendar.getInstance();
+				cal.setTime(ts);
+				cal.add(Calendar.DAY_OF_WEEK, scene.getRelativeDateDifference());
+				ts.setTime(cal.getTime().getTime());
+				lbTime.setText("[" + formatter.format(ts) + "]");
 			}
 		}
 
