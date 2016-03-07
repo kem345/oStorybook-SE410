@@ -213,10 +213,8 @@ public class ChronoScenePanel extends AbstractScenePanel implements FocusListene
 		// scene time
 		lbTime = new JLabel();
 		if (scene.hasSceneTs()) {
-			if (!DateUtil.isZeroTimeDate(scene.getSceneTs())) {
-				DateFormat formatter = I18N.getDateTimeFormatter();
-				lbTime.setText(formatter.format(scene.getSceneTs()));
-			}
+			DateFormat formatter = I18N.getDateTimeFormatter();
+			lbTime.setText(formatter.format(scene.getSceneTs()));
 		} else {
 			// Add the date of scenes with relative dates to the panel
 			if(scene.hasRelativeScene()) {
