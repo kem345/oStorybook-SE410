@@ -126,6 +126,17 @@ public class SceneDAOImpl extends SbGenericDAOImpl<Scene, Long> implements
 		List<Scene> scenes = (List<Scene>) crit.list();
 		return scenes;
 	}
+	
+	public Scene findRealtiveScene(Long id) {
+		List<Scene> scenes = findAll();
+		Scene relative = new Scene();
+		for(Scene s : scenes) {
+			if(s.getId() == id) 
+				relative = s;
+		}
+		
+		return relative;
+	}
 
 	@SuppressWarnings("unchecked")
 	public List<Scene> findScenesWithRelativeSceneId(Scene scene) {

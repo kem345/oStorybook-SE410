@@ -222,15 +222,10 @@ public class ChronoScenePanel extends AbstractScenePanel implements FocusListene
 				Session session = model.beginTransaction();
 				SceneDAOImpl dao = new SceneDAOImpl(session);
 				// Get all scenes from the book
-				List<Scene> allScenes = dao.findAll();
+				Scene relative = dao.findRealtiveScene(scene.getRelativeSceneId());
 				session.close();
 				// Create the timestamp for the relative date
-				Timestamp ts = new Timestamp(0);
-				// Go through all scenes and find the one that matches the realtive ID
-				for(Scene s : allScenes) {
-					if(s.getId() == scene.getRelativeSceneId()) 
-						ts = s.getSceneTs();
-				}
+				Timestamp ts = relative.getSceneTs();
 				DateFormat formatter = I18N.getDateTimeFormatter();
 				Calendar cal = Calendar.getInstance();
 				cal.setTime(ts);
