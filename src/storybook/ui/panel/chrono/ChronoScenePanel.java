@@ -26,8 +26,6 @@ import java.beans.PropertyChangeEvent;
 import java.sql.Timestamp;
 import java.text.DateFormat;
 import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -44,7 +42,6 @@ import storybook.action.EditEntityAction;
 import storybook.controller.BookController;
 import storybook.model.BookModel;
 import storybook.model.EntityUtil;
-import storybook.model.hbn.dao.SceneDAO;
 import storybook.model.hbn.dao.SceneDAOImpl;
 import storybook.model.hbn.entity.Internal;
 import storybook.model.hbn.entity.Scene;
@@ -166,18 +163,6 @@ public class ChronoScenePanel extends AbstractScenePanel implements FocusListene
 			}
 		}
 
-		// strand links
-		StrandLinksPanel strandLinksPanel = new StrandLinksPanel(mainFrame, scene, true);
-
-		// person links
-		PersonLinksPanel personLinksPanel = new PersonLinksPanel(mainFrame, scene);
-
-		// location links
-		LocationLinksPanel locationLinksPanel = new LocationLinksPanel(mainFrame, scene);
-
-		// location links
-		ItemLinksPanel itemLinksPanel = new ItemLinksPanel(mainFrame, scene);
-
 		// button new
 		btNew = getNewButton();
 		btNew.setSize20x20();
@@ -211,83 +196,20 @@ public class ChronoScenePanel extends AbstractScenePanel implements FocusListene
 		}
 
 		// scene time
-		lbTime = new JLabel();
-		if (scene.hasSceneTs()) {
-			DateFormat formatter = I18N.getDateTimeFormatter();
-			lbTime.setText(formatter.format(scene.getSceneTs()));
-		} else {
-			// Add the date of scenes with relative dates to the panel
-			if(scene.hasRelativeScene()) {
-				BookModel model = mainFrame.getBookModel();
-				Session session = model.beginTransaction();
-				SceneDAOImpl dao = new SceneDAOImpl(session);
-				// Get all scenes from the book
-				Scene relative = dao.findRealtiveScene(scene.getRelativeSceneId());
-				session.close();
-				// Create the timestamp for the relative date
-				Timestamp ts = relative.getSceneTs();
-				DateFormat formatter = I18N.getDateTimeFormatter();
-				Calendar cal = Calendar.getInstance();
-				cal.setTime(ts);
-				cal.add(Calendar.DAY_OF_WEEK, scene.getRelativeDateDifference());
-				ts.setTime(cal.getTime().getTime());
-				lbTime.setText("[" + formatter.format(ts) + "]");
-			}
-		}
+		lbTime = addSceneTimeTextToPanel();
 
 		// title
-		taTitle = new UndoableTextArea();
-		taTitle.setName(CN_TITLE);
-		taTitle.setText(scene.getTitle());
-		taTitle.setLineWrap(true);
-		taTitle.setWrapStyleWord(true);
-		taTitle.setDragEnabled(true);
-		taTitle.setCaretPosition(0);
-		taTitle.getUndoManager().discardAllEdits();
-		taTitle.addFocusListener(this);
-		SwingUtil.addCtrlEnterAction(taTitle, new EditEntityAction(mainFrame, scene,true));
-		JScrollPane spTitle = new JScrollPane(taTitle);
+		JScrollPane spTitle = generateTitlePane();
 		spTitle.setPreferredSize(new Dimension(50, 35));
 
-		// text
-		tcText = SwingUtil.createTextComponent(mainFrame);
-		tcText.setName(CN_TEXT);
-		tcText.setText(scene.getText());
-		tcText.setDragEnabled(true);
-		tcText.addFocusListener(this);
-		SwingUtil.addCtrlEnterAction(tcText, new EditEntityAction(mainFrame, scene,true));
-		JScrollPane spText = new JScrollPane(tcText);
+		// text	
+		JScrollPane spText = generateTextPane();
 		spText.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 		spText.setPreferredSize(new Dimension(Integer.MAX_VALUE, Integer.MAX_VALUE));
 
 		// layout
-
 		// button panel
-		JPanel buttonPanel = new JPanel(new MigLayout("flowy,insets 0"));
-		buttonPanel.setName("buttonpanel");
-		buttonPanel.setOpaque(false);
-		buttonPanel.add(btEdit);
-		buttonPanel.add(btDelete);
-		buttonPanel.add(btNew);
-
-		upperPanel = new JPanel(new MigLayout("ins 0", "[][grow][]", "[top][top][top]"));
-		upperPanel.setName(CN_UPPER_PANEL);
-		upperPanel.setOpaque(false);
-		upperPanel.add(lbSceneNo, "grow,width pref+10px,split 3");
-		upperPanel.add(lbStatus);
-		upperPanel.add(lbInformational);
-		upperPanel.add(strandLinksPanel, "grow");
-		upperPanel.add(buttonPanel, "spany 4,wrap");
-		JScrollPane scroller = new JScrollPane(personLinksPanel,
-				JScrollPane.VERTICAL_SCROLLBAR_NEVER,
-				JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
-		scroller.setMinimumSize(new Dimension(20, 16));
-		scroller.setOpaque(false);
-		scroller.getViewport().setOpaque(false);
-		scroller.setBorder(null);
-		upperPanel.add(scroller, "spanx 2,growx,wrap");
-		upperPanel.add(locationLinksPanel, "spanx 2,grow,wrap");
-		upperPanel.add(lbTime);
+		upperPanel = setupUpperPanel();
 
 		// main panel
 		add(upperPanel, "growx");
@@ -299,6 +221,108 @@ public class ChronoScenePanel extends AbstractScenePanel implements FocusListene
 
 		tcText.setCaretPosition(0);
 		taTitle.setCaretPosition(0);
+	}
+	
+	/**
+	 * Gets the timestamp for the scene and creates a label
+	 * on the panel that displays the timestamp
+	 * @return
+	 */
+	private JLabel addSceneTimeTextToPanel() {
+		JLabel label = new JLabel();
+		if (scene.hasSceneTs()) {
+			DateFormat formatter = I18N.getDateTimeFormatter();
+			label.setText(formatter.format(scene.getSceneTs()));
+		} else {
+			// Add the date of scenes with relative dates to the panel
+			if(scene.hasRelativeScene()) {
+				BookModel model = mainFrame.getBookModel();
+				Session session = model.beginTransaction();
+				SceneDAOImpl dao = new SceneDAOImpl(session);
+				// Get all scenes from the book
+				Scene relative = dao.findRealtiveScene(scene.getRelativeSceneId());
+				session.close();
+				// Create the timestamp for the relative date
+				Timestamp ts = relative.getSceneTs();
+				Calendar cal = Calendar.getInstance();
+				cal.setTime(ts);
+				cal.add(Calendar.DAY_OF_WEEK, scene.getRelativeDateDifference());
+				ts.setTime(cal.getTime().getTime());
+				DateFormat formatter = I18N.getDateTimeFormatter();
+				label.setText("[" + formatter.format(ts) + "]");
+			}
+		}
+		
+		return label;
+	}
+	
+	/**
+	 * Create the JScroll pane for the scene's title with the 
+	 * appropriate settings for it to be displayed correctly
+	 * @return - the JScrollPane for the scene title
+	 */
+	private JScrollPane generateTitlePane() {
+		taTitle = new UndoableTextArea();
+		taTitle.setName(CN_TITLE);
+		taTitle.setText(scene.getTitle());
+		taTitle.setLineWrap(true);
+		taTitle.setWrapStyleWord(true);
+		taTitle.setDragEnabled(true);
+		taTitle.setCaretPosition(0);
+		taTitle.getUndoManager().discardAllEdits();
+		taTitle.addFocusListener(this);
+		SwingUtil.addCtrlEnterAction(taTitle, new EditEntityAction(mainFrame, scene,true));
+		return new JScrollPane(taTitle);
+	}
+	
+	/**
+	 * Create the JScroll pane for the scene's text with the 
+	 * appropriate settings for it to be displayed correctly
+	 * @return - the JScrollPane for the scene text
+	 */
+	private JScrollPane generateTextPane() {
+		tcText = SwingUtil.createTextComponent(mainFrame);
+		tcText.setName(CN_TEXT);
+		tcText.setText(scene.getText());
+		tcText.setDragEnabled(true);
+		tcText.addFocusListener(this);
+		SwingUtil.addCtrlEnterAction(tcText, new EditEntityAction(mainFrame, scene,true));
+		return new JScrollPane(tcText);
+	}
+	
+	private JPanel setupUpperPanel() {
+		// strand links
+		StrandLinksPanel strandLinksPanel = new StrandLinksPanel(mainFrame, scene, true);
+		// person links
+		PersonLinksPanel personLinksPanel = new PersonLinksPanel(mainFrame, scene);
+		// location links
+		LocationLinksPanel locationLinksPanel = new LocationLinksPanel(mainFrame, scene);
+		JPanel buttonPanel = new JPanel(new MigLayout("flowy,insets 0"));
+		buttonPanel.setName("buttonpanel");
+		buttonPanel.setOpaque(false);
+		buttonPanel.add(btEdit);
+		buttonPanel.add(btDelete);
+		buttonPanel.add(btNew);
+		JPanel panel = new JPanel(new MigLayout("ins 0", "[][grow][]", "[top][top][top]"));
+		panel.setName(CN_UPPER_PANEL);
+		panel.setOpaque(false);
+		panel.add(lbSceneNo, "grow,width pref+10px,split 3");
+		panel.add(lbStatus);
+		panel.add(lbInformational);
+		panel.add(strandLinksPanel, "grow");
+		panel.add(buttonPanel, "spany 4,wrap");
+		JScrollPane scroller = new JScrollPane(personLinksPanel,
+				JScrollPane.VERTICAL_SCROLLBAR_NEVER,
+				JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+		scroller.setMinimumSize(new Dimension(20, 16));
+		scroller.setOpaque(false);
+		scroller.getViewport().setOpaque(false);
+		scroller.setBorder(null);
+		panel.add(scroller, "spanx 2,growx,wrap");
+		panel.add(locationLinksPanel, "spanx 2,grow,wrap");
+		panel.add(lbTime);
+		
+		return panel;
 	}
 
 	protected ChronoScenePanel getThis() {
