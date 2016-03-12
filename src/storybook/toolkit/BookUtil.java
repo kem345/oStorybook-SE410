@@ -221,14 +221,8 @@ public class BookUtil {
 						JOptionPane.ERROR_MESSAGE);
 				return null;		
 			}
-			String extension ="";
 			
-			String fileString = file.toString();
-			int i = fileString.lastIndexOf('.');
-			if (i > 0) {
-			    extension = fileString.substring(i+1);
-			}
-			if (!extension.equals("db")){
+			if (!isDbFile(file.toString()){
 				JOptionPane.showMessageDialog(null,
 						"Invalid file type. Must be a H2 Database File",
 						"Invalid file type",
@@ -239,6 +233,20 @@ public class BookUtil {
 			return dbFile;
 		}
 		return null;
+	}
+	private static boolean isDbFile(String fileString){
+		String extension ="";
+			
+			String fileString = file.toString();
+			int i = fileString.lastIndexOf('.');
+			if (i > 0) {
+			    extension = fileString.substring(i+1);
+			}
+			if (!extension.equals("db")){
+				return false;
+			}else{
+				return true;
+			}
 	}
 	
 	public static String getHomeDir() {
