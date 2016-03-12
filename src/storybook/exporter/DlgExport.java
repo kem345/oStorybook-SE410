@@ -502,22 +502,22 @@ public class DlgExport extends javax.swing.JDialog {
 	}
 
 	private void doExportSQL() {
-		String url = "jdbc:h2:" + mainFrame.getDbFile().getDbName();
-		String file = /*txFolder.getText()+File.separator+*/mainFrame.getDbFile().getDbName()+".sql";
-		System.out.println("export to "+file);
-        try {
-			Script.process(url, "sa", "", file, "", "");
-			JOptionPane.showMessageDialog(this,
-					"Export SQL is OK.",
-					"SQL export",
-					JOptionPane.INFORMATION_MESSAGE);
-		} catch (SQLException ex) {
-			System.err.println("export SQL exception=" + ex.getMessage());
-			JOptionPane.showMessageDialog(this,
-					"An error occured during export SQL, please report this error.",
-					"SQL export error",
-					JOptionPane.ERROR_MESSAGE);
-		}
+//		String url = "jdbc:h2:" + mainFrame.getDbFile().getDbName();
+//		String file = /*txFolder.getText()+File.separator+*/mainFrame.getDbFile().getDbName()+".sql";
+//		System.out.println("export to "+file);
+//        try {
+//			Script.process(url, "sa", "", file, "", "");
+//			JOptionPane.showMessageDialog(this,
+//					"Export SQL is OK.",
+//					"SQL export",
+//					JOptionPane.INFORMATION_MESSAGE);
+//		} catch (SQLException ex) {
+//			System.err.println("export SQL exception=" + ex.getMessage());
+//			JOptionPane.showMessageDialog(this,
+//					"An error occured during export SQL, please report this error.",
+//					"SQL export error",
+//					JOptionPane.ERROR_MESSAGE);
+//		}
 	}
 
 }
