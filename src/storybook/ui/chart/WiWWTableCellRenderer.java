@@ -16,6 +16,7 @@
 package storybook.ui.chart;
 
 import java.awt.Component;
+
 import javax.swing.JLabel;
 import javax.swing.JTable;
 import javax.swing.table.TableCellRenderer;

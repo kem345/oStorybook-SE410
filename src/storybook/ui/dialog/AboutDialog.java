@@ -30,12 +30,11 @@ import javax.swing.JTabbedPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextPane;
 
+import net.miginfocom.swing.MigLayout;
 import storybook.SbConstants;
 import storybook.toolkit.I18N;
 import storybook.toolkit.swing.SwingUtil;
 import storybook.ui.MainFrame;
-
-import net.miginfocom.swing.MigLayout;
 
 /**
  * The about dialog shows the copyright, credits and some internal information that may help to support clients.

@@ -24,8 +24,8 @@ import storybook.model.hbn.dao.LocationDAOImpl;
 import storybook.model.hbn.entity.AbstractEntity;
 import storybook.model.hbn.entity.Location;
 import storybook.ui.MainFrame;
-import storybook.ui.table.SbColumnFactory;
 import storybook.ui.combo.LocationListCellRenderer;
+import storybook.ui.table.SbColumnFactory;
 
 /**
  * @author martin

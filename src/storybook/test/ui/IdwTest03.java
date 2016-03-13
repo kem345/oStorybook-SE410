@@ -25,8 +25,6 @@ import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 import javax.swing.WindowConstants;
 
-import storybook.ui.SbView;
-
 import net.infonode.docking.DockingWindow;
 import net.infonode.docking.DockingWindowAdapter;
 import net.infonode.docking.OperationAbortedException;
@@ -37,6 +35,7 @@ import net.infonode.docking.util.DockingUtil;
 import net.infonode.docking.util.ViewMap;
 import net.infonode.util.Direction;
 import net.miginfocom.swing.MigLayout;
+import storybook.ui.SbView;
 
 @SuppressWarnings({ "serial" })
 public class IdwTest03 extends JFrame {

@@ -24,13 +24,12 @@ import javax.swing.AbstractAction;
 import javax.swing.JCheckBox;
 import javax.swing.JLabel;
 
+import net.miginfocom.swing.MigLayout;
 import storybook.SbConstants.BookKey;
 import storybook.model.EntityUtil;
 import storybook.toolkit.BookUtil;
 import storybook.toolkit.I18N;
 import storybook.ui.MainFrame;
-
-import net.miginfocom.swing.MigLayout;
 
 /**
  * @author martin

@@ -25,7 +25,7 @@ import java.util.List;
 import javax.swing.Icon;
 
 import org.apache.commons.lang3.time.DateUtils;
-import storybook.SbApp;
+
 import storybook.model.state.SceneState;
 import storybook.model.state.SceneStateModel;
 import storybook.toolkit.DateUtil;

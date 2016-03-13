@@ -17,14 +17,15 @@ import javax.swing.JLabel;
 import net.miginfocom.swing.MigLayout;
 
 import org.hibernate.Session;
+
 import storybook.controller.BookController;
 import storybook.model.BookModel;
 import storybook.model.hbn.dao.StrandDAOImpl;
 import storybook.model.hbn.entity.Strand;
 import storybook.toolkit.I18N;
 import storybook.toolkit.swing.SwingUtil;
-import storybook.ui.panel.AbstractPanel;
 import storybook.ui.MainFrame;
+import storybook.ui.panel.AbstractPanel;
 
 @SuppressWarnings("serial")
 public class StrandPanel extends AbstractPanel implements ItemListener {

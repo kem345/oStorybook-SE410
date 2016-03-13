@@ -16,11 +16,14 @@
 package storybook.ui.combo;
 
 import java.util.List;
+
 import javax.swing.DefaultListModel;
 import javax.swing.JComboBox;
 import javax.swing.JList;
 import javax.swing.text.Position;
+
 import org.hibernate.Session;
+
 import storybook.model.BookModel;
 import storybook.model.hbn.dao.AttributeDAOImpl;
 import storybook.model.hbn.dao.CategoryDAOImpl;
@@ -48,8 +51,8 @@ import storybook.model.hbn.entity.Person;
 import storybook.model.hbn.entity.Scene;
 import storybook.model.hbn.entity.Strand;
 import storybook.model.hbn.entity.Tag;
-import storybook.ui.MainFrame;
 import storybook.toolkit.I18N;
+import storybook.ui.MainFrame;
 
 /**
  *

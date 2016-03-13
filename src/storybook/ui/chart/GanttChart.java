@@ -4,23 +4,17 @@
  */
 package storybook.ui.chart;
 
-import storybook.model.BookModel;
-import storybook.model.EntityUtil;
-import storybook.model.hbn.dao.PersonDAOImpl;
-import storybook.model.hbn.dao.SceneDAOImpl;
-import storybook.model.hbn.entity.Gender;
-import storybook.model.hbn.entity.Person;
-import storybook.toolkit.I18N;
-import storybook.ui.MainFrame;
-import storybook.ui.chart.jfreechart.ChartUtil;
 import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
+
 import javax.swing.JCheckBox;
 import javax.swing.JPanel;
+
 import net.miginfocom.swing.MigLayout;
+
 import org.apache.commons.lang3.time.DateUtils;
 import org.hibernate.Session;
 import org.jfree.chart.ChartFactory;
@@ -34,7 +28,17 @@ import org.jfree.data.gantt.TaskSeries;
 import org.jfree.data.gantt.TaskSeriesCollection;
 import org.jfree.data.time.SimpleTimePeriod;
 import org.jfree.ui.Layer;
+
 import storybook.SbConstants;
+import storybook.model.BookModel;
+import storybook.model.EntityUtil;
+import storybook.model.hbn.dao.PersonDAOImpl;
+import storybook.model.hbn.dao.SceneDAOImpl;
+import storybook.model.hbn.entity.Gender;
+import storybook.model.hbn.entity.Person;
+import storybook.toolkit.I18N;
+import storybook.ui.MainFrame;
+import storybook.ui.chart.jfreechart.ChartUtil;
 
 public class GanttChart extends AbstractPersonsChart {
 

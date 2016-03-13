@@ -26,6 +26,7 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 
+import net.miginfocom.swing.MigLayout;
 import storybook.SbConstants.ViewName;
 import storybook.controller.BookController;
 import storybook.model.EntityUtil;
@@ -35,10 +36,8 @@ import storybook.toolkit.I18N;
 import storybook.toolkit.swing.IconButton;
 import storybook.toolkit.swing.SwingUtil;
 import storybook.toolkit.swing.panel.ViewsRadioButtonPanel;
-import storybook.ui.panel.AbstractPanel;
 import storybook.ui.MainFrame;
-
-import net.miginfocom.swing.MigLayout;
+import storybook.ui.panel.AbstractPanel;
 
 /**
  * @author martin

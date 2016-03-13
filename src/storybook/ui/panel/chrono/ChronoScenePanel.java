@@ -34,6 +34,8 @@ import javax.swing.ScrollPaneConstants;
 import javax.swing.SwingConstants;
 import javax.swing.text.JTextComponent;
 
+import net.miginfocom.swing.MigLayout;
+
 import org.hibernate.Session;
 
 import storybook.SbConstants;
@@ -45,20 +47,17 @@ import storybook.model.EntityUtil;
 import storybook.model.hbn.dao.SceneDAOImpl;
 import storybook.model.hbn.entity.Internal;
 import storybook.model.hbn.entity.Scene;
-import storybook.toolkit.DateUtil;
 import storybook.toolkit.BookUtil;
+import storybook.toolkit.DateUtil;
 import storybook.toolkit.I18N;
 import storybook.toolkit.swing.SwingUtil;
 import storybook.toolkit.swing.undo.UndoableTextArea;
-import storybook.ui.panel.AbstractScenePanel;
 import storybook.ui.MainFrame;
 import storybook.ui.label.SceneStateLabel;
+import storybook.ui.panel.AbstractScenePanel;
 import storybook.ui.panel.linkspanel.LocationLinksPanel;
 import storybook.ui.panel.linkspanel.PersonLinksPanel;
 import storybook.ui.panel.linkspanel.StrandLinksPanel;
-
-import net.miginfocom.swing.MigLayout;
-import storybook.ui.panel.linkspanel.ItemLinksPanel;
 
 @SuppressWarnings("serial")
 public class ChronoScenePanel extends AbstractScenePanel implements FocusListener {

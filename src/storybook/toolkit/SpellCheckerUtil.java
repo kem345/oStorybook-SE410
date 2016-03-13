@@ -24,14 +24,14 @@ import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URL;
 
-import com.inet.jortho.FileUserDictionary;
-import com.inet.jortho.SpellChecker;
-
+import storybook.SbApp;
 import storybook.SbConstants;
 import storybook.SbConstants.PreferenceKey;
 import storybook.SbConstants.Spelling;
 import storybook.model.hbn.entity.Preference;
-import storybook.SbApp;
+
+import com.inet.jortho.FileUserDictionary;
+import com.inet.jortho.SpellChecker;
 
 public class SpellCheckerUtil {
 

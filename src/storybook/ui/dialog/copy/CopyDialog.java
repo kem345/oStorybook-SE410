@@ -39,9 +39,10 @@ import javax.swing.SwingUtilities;
 import javax.swing.event.CaretEvent;
 import javax.swing.event.CaretListener;
 
+import net.miginfocom.swing.MigLayout;
+
 import org.hibernate.Session;
 
-import net.miginfocom.swing.MigLayout;
 import storybook.SbApp;
 import storybook.SbConstants.BookKey;
 import storybook.model.BookModel;

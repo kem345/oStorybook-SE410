@@ -25,6 +25,7 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
+
 import storybook.model.hbn.entity.Idea;
 
 public class IdeaDAOImpl extends SbGenericDAOImpl<Idea, Long> implements

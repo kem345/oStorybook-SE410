@@ -22,11 +22,10 @@ import java.beans.PropertyChangeEvent;
 
 import javax.swing.JLabel;
 
+import net.miginfocom.swing.MigLayout;
 import storybook.model.EntityUtil;
 import storybook.model.hbn.entity.AbstractEntity;
 import storybook.ui.panel.AbstractPanel;
-
-import net.miginfocom.swing.MigLayout;
 
 /**
  * @author martin

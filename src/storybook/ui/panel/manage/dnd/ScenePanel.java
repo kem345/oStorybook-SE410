@@ -28,6 +28,8 @@ import javax.accessibility.Accessible;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import net.miginfocom.swing.MigLayout;
+import storybook.SbApp;
 import storybook.SbConstants;
 import storybook.SbConstants.BookKey;
 import storybook.action.EditEntityAction;
@@ -39,12 +41,9 @@ import storybook.toolkit.I18N;
 import storybook.toolkit.html.HtmlUtil;
 import storybook.toolkit.swing.ColorUtil;
 import storybook.toolkit.swing.SwingUtil;
-import storybook.ui.panel.AbstractScenePanel;
 import storybook.ui.MainFrame;
 import storybook.ui.interfaces.IRefreshable;
-
-import net.miginfocom.swing.MigLayout;
-import storybook.SbApp;
+import storybook.ui.panel.AbstractScenePanel;
 
 @SuppressWarnings("serial")
 public class ScenePanel extends AbstractScenePanel implements MouseListener, Accessible, IRefreshable {

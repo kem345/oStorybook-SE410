@@ -30,6 +30,7 @@ import java.util.Date;
 import javax.swing.AbstractAction;
 import javax.swing.BorderFactory;
 
+import net.miginfocom.swing.MigLayout;
 import storybook.SbConstants.ViewName;
 import storybook.controller.BookController;
 import storybook.model.EntityUtil;
@@ -37,10 +38,8 @@ import storybook.model.hbn.entity.Scene;
 import storybook.model.hbn.entity.Strand;
 import storybook.toolkit.I18N;
 import storybook.toolkit.swing.IconButton;
-import storybook.ui.panel.AbstractPanel;
 import storybook.ui.MainFrame;
-
-import net.miginfocom.swing.MigLayout;
+import storybook.ui.panel.AbstractPanel;
 
 @SuppressWarnings("serial")
 public class SpacePanel extends AbstractPanel implements MouseListener {

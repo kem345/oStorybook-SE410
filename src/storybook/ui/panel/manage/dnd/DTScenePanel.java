@@ -22,8 +22,8 @@ import java.awt.event.MouseMotionListener;
 
 import javax.swing.JComponent;
 import javax.swing.TransferHandler;
-import storybook.SbApp;
 
+import storybook.SbApp;
 import storybook.model.hbn.entity.Scene;
 import storybook.ui.MainFrame;
 

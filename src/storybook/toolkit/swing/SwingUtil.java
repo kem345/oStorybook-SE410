@@ -79,8 +79,7 @@ import javax.swing.plaf.basic.BasicToolBarUI;
 import javax.swing.text.DefaultEditorKit;
 import javax.swing.text.JTextComponent;
 
-import shef.ui.text.WysiwygHTMLEditorKit;
-
+import net.atlanticbb.tantlinger.ui.text.WysiwygHTMLEditorKit;
 import net.miginfocom.swing.MigLayout;
 
 import org.apache.commons.lang3.StringUtils;

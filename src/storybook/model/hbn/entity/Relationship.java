@@ -19,6 +19,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 package storybook.model.hbn.entity;
 
 import java.util.List;
+
 import storybook.toolkit.I18N;
 import storybook.toolkit.Period;
 

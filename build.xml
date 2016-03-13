@@ -1,0 +1,145 @@
+<project name="oStorybook-SE410" default='dist' basedir='.'>
+  
+    <description>
+        Plan a novel as you write it to maintain convenient oganization
+    </description>
+	
+    <!-- Properties -->
+    <!-- input directory of java source files -->
+    <property name="src.dir" location ="${basedir}/src/"/>
+    <!-- output directory to hold built class files -->
+    <property name="build.dir" location="${basedir}/build/"/>
+    <!-- Library directory with jar files needed to compile program -->
+    <property name="lib.dir" location = "${basedir}/lib/"/>
+    <!-- Distribution directory for organizing build products -->
+    <property name="dist.dir" location = "${basedir}/dist/"/>
+    <!-- Distribution class path -->
+    <property name="dist.classpath" value="${lib.dir}/**/*.jar"/>
+    <!-- Name of the program for consistency -->
+    <property name="program.name" value="oStorybook-SE410" />
+    <!-- Main app file for running the program -->
+    <property name="program.main" value="storybook.SbApp" />
+    
+	<!-- Ant build flag -->
+	<!-- rebuild is a complicated way of asking run if it wants a clean build -->
+	<property name="rebuild" value="false"/>
+	<!-- Argument Properties -->
+	<!-- Set these to pass arguments into target runs -->
+	<!-- Flags identified in SbApp class main method -->
+	<property name="trace" value="false"/>
+	<property name="hibernate" value ="false"/>
+	<property name="dev" value="false"/>
+	<property name="msg" value=""/>
+	
+	<!-- Identical, conditional arg values -->
+	<!-- trace arg -->
+	<condition property="trace.arg" value="--trace" else="">
+		<istrue value="${trace}"/>
+	</condition>
+	
+	<!-- hibernate arg -->
+	<condition property="hibernate.arg" value="--hibernate" else="">
+		<istrue value="${hibernate}"/>	
+	</condition>
+	
+	<!-- dev arg -->
+	<condition property="dev.arg" value="--dev" else="">
+		<istrue value="dev"/>	
+	</condition>
+	
+	<!-- msg args -->
+	<!-- Set the msg arguments flags if the message is not currently equal to the null string -->
+	<condition property="msg.arg" value="--msg">
+		<not>
+			<equals arg1="${msg}" arg2=""/>
+		</not>
+	</condition>
+	<condition property="msg.arg.body" value="${msg}">
+		<not>
+			<equals arg1="${msg}" arg2=""/>
+		</not>
+	</condition>
+	
+	
+    <!-- Classpath to include {lib}rary directory jars and zips -->
+    <path id="lib.classpath">
+        <fileset dir="${basedir}/lib" includes="**/*.jar"/>
+        <fileset dir="${basedir}/lib" includes="**/*.zip"/>
+    </path>
+    
+    
+    <!-- {clean} target for removing previously created directories and files -->
+    <!-- Clean up the project for a new distribution of the program -->
+    <target name="clean" description="cleaning up...">
+        <!-- Delete previously generated directories -->
+        <delete dir="${build.dir}"/>
+        <delete dir="${dist.dir}"/>
+    </target>
+    
+    
+    
+    <!-- {compile} target for compiling the source and imports -->
+    <!-- compile the project -->
+    <target name="compile" depends="clean" description="compile java source files">
+        
+        <!-- create directory to build to -->
+        <mkdir dir="${build.dir}"/>
+        
+        <!-- Compile the java source files -->
+        <javac srcdir="${src.dir}" destdir="${build.dir}" classpathref="lib.classpath"/>
+
+    </target>
+    
+    
+    <!-- {dist}tribution target for distributing the jar-->
+    <!-- Bundle the files in single jar -->
+    <target name="dist" depends="compile" description="generate the distribution bundle">
+        <!-- Create the distribution jar -->
+        <mkdir dir="${dist.dir}"/>
+        
+        <!-- Build the jar that runs the program -->
+        <jar destfile="${dist.dir}/${program.name}.jar" basedir="${build.dir}" >
+            <manifest>
+                <attribute name="Main-Class" value="${program.main}"/>
+            </manifest>
+            <!-- Make sure to include resources in the distribution jar -->
+            <fileset dir="${src.dir}" includes="**/*.png" />
+            <fileset dir="${src.dir}" includes="**/*.properties" />
+            <fileset dir="${src.dir}" includes="**/*.odt" />
+            <fileset dir="${src.dir}" includes="**/*.ott" />
+            <fileset dir="${src.dir}" includes="**/*.xml" />
+            
+        </jar>
+        
+    </target>
+	
+    
+	<!-- {dist.if.fresh} quick target for responding to rebuild flag -->
+	<target name="dist.if.rebuild" description="if the rebuild flag is set, rebuild the distribution jar" if="${rebuild}">
+		<!-- if this should rebuild, invoke dist target -->
+		<antcall target="dist"/>
+	</target>
+	
+	
+    <!-- {run} target for executing the program -->
+    <target name="run" depends="dist.if.rebuild">    	
+    	
+    	<!-- run the program -->
+        <java fork="true" classname="${program.main}">
+        	
+			<arg value="${trace.arg}"/>
+        	<arg value="${hibernate.arg}"/>
+			<arg value="${dev.arg}"/>
+        	<arg value="${msg.arg}"/>
+        	<arg value="${msg.arg.body}"/>
+			
+        	<!-- Classpath of the program jar with references to needed import jars -->
+            <classpath>
+                <path refid="lib.classpath"/>
+                <path location="${dist.dir}/${program.name}.jar"/>
+            </classpath>
+        	
+        </java>
+    </target>
+    
+</project>

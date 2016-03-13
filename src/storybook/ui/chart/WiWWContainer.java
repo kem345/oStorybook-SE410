@@ -15,17 +15,19 @@
  */
 package storybook.ui.chart;
 
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
+
+import org.hibernate.Session;
+
 import storybook.model.BookModel;
 import storybook.model.hbn.dao.LocationDAOImpl;
 import storybook.model.hbn.entity.Location;
 import storybook.model.hbn.entity.Person;
 import storybook.toolkit.DateUtil;
 import storybook.ui.MainFrame;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.Iterator;
-import java.util.List;
-import org.hibernate.Session;
 
 public class WiWWContainer
 {

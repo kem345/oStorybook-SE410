@@ -26,13 +26,12 @@ import javax.swing.JSlider;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
+import net.miginfocom.swing.MigLayout;
 import storybook.toolkit.I18N;
 import storybook.toolkit.swing.SwingUtil;
 import storybook.toolkit.swing.panel.BackgroundPanel;
 import storybook.ui.MainFrame;
 import storybook.ui.dialog.AbstractDialog;
-
-import net.miginfocom.swing.MigLayout;
 
 /**
  * @author martin

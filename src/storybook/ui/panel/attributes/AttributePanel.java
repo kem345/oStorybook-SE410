@@ -24,11 +24,10 @@ import java.util.List;
 
 import javax.swing.JTextField;
 
+import net.miginfocom.swing.MigLayout;
 import storybook.model.hbn.entity.Attribute;
 import storybook.toolkit.swing.AutoCompleteComboBox;
 import storybook.ui.panel.AbstractPanel;
-
-import net.miginfocom.swing.MigLayout;
 
 /**
  * @author martin

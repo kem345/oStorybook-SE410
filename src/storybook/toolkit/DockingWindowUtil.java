@@ -30,8 +30,8 @@ import net.infonode.docking.View;
 import net.infonode.docking.WindowBar;
 import net.infonode.docking.properties.TabWindowProperties;
 import net.infonode.docking.util.StringViewMap;
-import org.apache.commons.codec.DecoderException;
 
+import org.apache.commons.codec.DecoderException;
 import org.apache.commons.codec.binary.Hex;
 import org.apache.commons.codec.digest.DigestUtils;
 
@@ -40,10 +40,10 @@ import storybook.SbConstants.PreferenceKey;
 import storybook.SbConstants.ViewName;
 import storybook.controller.BookController;
 import storybook.model.hbn.entity.Preference;
-import storybook.ui.panel.AbstractPanel;
 import storybook.ui.MainFrame;
 import storybook.ui.SbView;
 import storybook.ui.ViewFactory;
+import storybook.ui.panel.AbstractPanel;
 
 /**
  * @author martin

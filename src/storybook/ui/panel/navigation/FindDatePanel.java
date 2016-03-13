@@ -35,6 +35,7 @@ import javax.swing.Timer;
 import net.miginfocom.swing.MigLayout;
 
 import org.hibernate.Session;
+
 import storybook.SbConstants.ViewName;
 import storybook.action.ScrollToStrandDateAction;
 import storybook.model.BookModel;
@@ -46,9 +47,9 @@ import storybook.toolkit.I18N;
 import storybook.toolkit.swing.IconButton;
 import storybook.toolkit.swing.SwingUtil;
 import storybook.toolkit.swing.panel.ViewsRadioButtonPanel;
-import storybook.ui.panel.AbstractPanel;
 import storybook.ui.MainFrame;
 import storybook.ui.SbView;
+import storybook.ui.panel.AbstractPanel;
 import storybook.ui.panel.book.BookPanel;
 import storybook.ui.panel.chrono.ChronoPanel;
 

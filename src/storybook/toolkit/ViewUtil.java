@@ -35,6 +35,7 @@ import javax.swing.SwingUtilities;
 import javax.swing.Timer;
 
 import org.hibernate.Session;
+
 import storybook.action.ScrollToEntityAction;
 import storybook.model.BookModel;
 import storybook.model.hbn.dao.ChapterDAOImpl;
@@ -43,9 +44,9 @@ import storybook.model.hbn.entity.Part;
 import storybook.model.hbn.entity.Scene;
 import storybook.model.hbn.entity.Strand;
 import storybook.toolkit.swing.SwingUtil;
+import storybook.ui.MainFrame;
 import storybook.ui.panel.AbstractPanel;
 import storybook.ui.panel.AbstractScenePanel;
-import storybook.ui.MainFrame;
 import storybook.ui.panel.book.BookPanel;
 import storybook.ui.panel.book.BookScenePanel;
 import storybook.ui.panel.chrono.ChronoPanel;

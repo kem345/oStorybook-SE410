@@ -63,6 +63,11 @@ import storybook.ui.dialog.SplashDialog;
 import storybook.ui.dialog.file.NewFileDialog;
 
 public class SbApp extends Component {
+	/**
+	 * Added default serial version ID to make eclipse compiler happy
+	 */
+	private static final long serialVersionUID = 1L;
+	
 	private static boolean bTrace=false;
 	private static boolean bTraceHibernate=false;
 

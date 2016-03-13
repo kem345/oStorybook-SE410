@@ -22,6 +22,7 @@ import javax.swing.JCheckBox;
 import javax.swing.JLabel;
 
 import org.apache.commons.lang3.text.WordUtils;
+
 import storybook.model.hbn.entity.AbstractEntity;
 import storybook.model.hbn.entity.Location;
 

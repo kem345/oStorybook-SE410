@@ -4,19 +4,12 @@
  */
 package storybook.ui.chart;
 
-import storybook.model.BookModel;
-import storybook.model.hbn.dao.SceneDAOImpl;
-import storybook.model.hbn.dao.StrandDAOImpl;
-import storybook.model.hbn.entity.Part;
-import storybook.model.hbn.entity.Strand;
-import storybook.toolkit.swing.ColorUtil;
-import storybook.ui.MainFrame;
-import storybook.ui.chart.jfreechart.ChartUtil;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
+
 import org.hibernate.Session;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
@@ -27,6 +20,15 @@ import org.jfree.chart.renderer.category.BarRenderer;
 import org.jfree.data.category.CategoryDataset;
 import org.jfree.data.category.DefaultCategoryDataset;
 import org.jfree.ui.Layer;
+
+import storybook.model.BookModel;
+import storybook.model.hbn.dao.SceneDAOImpl;
+import storybook.model.hbn.dao.StrandDAOImpl;
+import storybook.model.hbn.entity.Part;
+import storybook.model.hbn.entity.Strand;
+import storybook.toolkit.swing.ColorUtil;
+import storybook.ui.MainFrame;
+import storybook.ui.chart.jfreechart.ChartUtil;
 
 public class StrandsByDateChart extends AbstractChartPanel {
 

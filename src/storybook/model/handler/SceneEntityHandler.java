@@ -24,8 +24,8 @@ import storybook.model.hbn.dao.SceneDAOImpl;
 import storybook.model.hbn.entity.AbstractEntity;
 import storybook.model.hbn.entity.Scene;
 import storybook.ui.MainFrame;
-import storybook.ui.table.SbColumnFactory;
 import storybook.ui.combo.SceneListCellRenderer;
+import storybook.ui.table.SbColumnFactory;
 
 /**
  * @author martin

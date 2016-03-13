@@ -20,8 +20,8 @@ package storybook;
 import java.awt.Dimension;
 import java.util.Locale;
 
-import storybook.toolkit.I18N;
 import net.infonode.docking.View;
+import storybook.toolkit.I18N;
 
 /**
  * @author martin

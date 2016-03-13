@@ -33,17 +33,18 @@ import javax.swing.SpinnerDateModel;
 import net.miginfocom.swing.MigLayout;
 
 import org.apache.commons.lang3.time.DateUtils;
+
+import storybook.SbConstants;
 import storybook.model.EntityUtil;
 import storybook.toolkit.DateUtil;
 import storybook.toolkit.I18N;
+import storybook.toolkit.PrefUtil;
 import storybook.toolkit.swing.IconButton;
-import storybook.ui.panel.AbstractPanel;
 import storybook.ui.MainFrame;
+import storybook.ui.panel.AbstractPanel;
 
 import com.toedter.calendar.JDateChooser;
 import com.toedter.calendar.JTextFieldDateEditor;
-import storybook.SbConstants;
-import storybook.toolkit.PrefUtil;
 
 /**
  * @author martin

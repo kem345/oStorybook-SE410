@@ -24,11 +24,10 @@ import javax.swing.ButtonGroup;
 import javax.swing.JLabel;
 import javax.swing.JRadioButton;
 
-import storybook.toolkit.I18N;
-import storybook.ui.panel.AbstractPanel;
-import storybook.ui.MainFrame;
-
 import net.miginfocom.swing.MigLayout;
+import storybook.toolkit.I18N;
+import storybook.ui.MainFrame;
+import storybook.ui.panel.AbstractPanel;
 
 /**
  * @author martin

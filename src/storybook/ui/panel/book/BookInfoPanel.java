@@ -25,21 +25,20 @@ import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
+import net.miginfocom.swing.MigLayout;
 import storybook.controller.BookController;
 import storybook.model.hbn.entity.Scene;
 import storybook.model.hbn.entity.Strand;
 import storybook.toolkit.I18N;
 import storybook.toolkit.swing.SwingUtil;
 import storybook.toolkit.swing.label.CleverLabel;
-import storybook.ui.panel.AbstractPanel;
 import storybook.ui.MainFrame;
+import storybook.ui.panel.AbstractPanel;
 import storybook.ui.panel.chrono.StrandDateLabel;
+import storybook.ui.panel.linkspanel.ItemLinksPanel;
 import storybook.ui.panel.linkspanel.LocationLinksPanel;
 import storybook.ui.panel.linkspanel.PersonLinksPanel;
 import storybook.ui.panel.linkspanel.StrandLinksPanel;
-
-import net.miginfocom.swing.MigLayout;
-import storybook.ui.panel.linkspanel.ItemLinksPanel;
 
 /**
  * @author martin

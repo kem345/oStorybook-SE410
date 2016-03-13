@@ -26,6 +26,7 @@ import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
+import net.miginfocom.swing.MigLayout;
 import storybook.controller.BookController;
 import storybook.model.EntityUtil;
 import storybook.model.handler.ChapterEntityHandler;
@@ -34,8 +35,6 @@ import storybook.model.hbn.entity.Chapter;
 import storybook.model.hbn.entity.Part;
 import storybook.toolkit.I18N;
 import storybook.ui.MainFrame;
-
-import net.miginfocom.swing.MigLayout;
 
 @SuppressWarnings("serial")
 public class CreateChaptersDialog extends AbstractDialog {

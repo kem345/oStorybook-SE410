@@ -18,7 +18,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 package storybook.ui;
 
-import storybook.ui.panel.AbstractPanel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.beans.PropertyChangeEvent;
@@ -29,6 +28,7 @@ import javax.swing.JLabel;
 import net.miginfocom.swing.MigLayout;
 
 import org.hibernate.Session;
+
 import storybook.SbApp;
 import storybook.controller.BookController;
 import storybook.model.BookModel;
@@ -40,6 +40,7 @@ import storybook.model.hbn.entity.Person;
 import storybook.model.hbn.entity.Scene;
 import storybook.toolkit.I18N;
 import storybook.toolkit.swing.panel.MemoryMonitorPanel;
+import storybook.ui.panel.AbstractPanel;
 
 /**
  * @author martin

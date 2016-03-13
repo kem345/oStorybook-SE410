@@ -66,7 +66,6 @@
 	<classpathentry kind="lib" path="/Users/DrunkWithFunk21/Workspace/Eclipse-Luna/Drexel/oStorybook-SE410/lib/jung-jai-samples-2.0.1.jar"/>
 	<classpathentry kind="lib" path="/Users/DrunkWithFunk21/Workspace/Eclipse-Luna/Drexel/oStorybook-SE410/lib/jung-visualization-2.0.1.jar"/>
 	<classpathentry kind="lib" path="/Users/DrunkWithFunk21/Workspace/Eclipse-Luna/Drexel/oStorybook-SE410/lib/jWordSplitter.jar"/>
-	<classpathentry kind="lib" path="/Users/DrunkWithFunk21/Workspace/Eclipse-Luna/Drexel/oStorybook-SE410/lib/LanguageTool.jar"/>
 	<classpathentry kind="lib" path="/Users/DrunkWithFunk21/Workspace/Eclipse-Luna/Drexel/oStorybook-SE410/lib/log4j-1.2.16.jar"/>
 	<classpathentry kind="lib" path="/Users/DrunkWithFunk21/Workspace/Eclipse-Luna/Drexel/oStorybook-SE410/lib/miglayout-4.0-swing.jar"/>
 	<classpathentry kind="lib" path="/Users/DrunkWithFunk21/Workspace/Eclipse-Luna/Drexel/oStorybook-SE410/lib/miglayout-4.0-swt.jar"/>

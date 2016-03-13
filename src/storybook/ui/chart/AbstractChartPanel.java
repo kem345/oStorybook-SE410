@@ -22,12 +22,14 @@ import java.awt.event.ActionListener;
 import java.beans.PropertyChangeEvent;
 import java.io.File;
 import java.io.IOException;
+
 import javax.swing.AbstractAction;
 import javax.swing.JFileChooser;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
+
 import net.infonode.docking.View;
 import net.miginfocom.swing.MigLayout;
 import storybook.SbConstants;
@@ -41,8 +43,8 @@ import storybook.toolkit.filefilter.PngFileFilter;
 import storybook.toolkit.swing.PrintUtil;
 import storybook.toolkit.swing.ScreenImage;
 import storybook.toolkit.swing.SwingUtil;
-import storybook.ui.panel.AbstractPanel;
 import storybook.ui.MainFrame;
+import storybook.ui.panel.AbstractPanel;
 
 public abstract class AbstractChartPanel extends AbstractPanel
 	implements ActionListener {

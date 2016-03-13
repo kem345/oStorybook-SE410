@@ -4,21 +4,11 @@
  */
 package storybook.ui.chart;
 
-import storybook.model.BookModel;
-import storybook.model.hbn.dao.ChapterDAOImpl;
-import storybook.model.hbn.dao.PersonDAOImpl;
-import storybook.model.hbn.entity.Chapter;
-import storybook.model.hbn.entity.Part;
-import storybook.model.hbn.entity.Person;
-import storybook.model.hbn.entity.Scene;
-import storybook.toolkit.I18N;
-import storybook.ui.MainFrame;
-import storybook.ui.chart.jfreechart.ChartUtil;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import java.util.TreeSet;
-import javax.swing.JPanel;
+
 import org.hibernate.Session;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
@@ -35,6 +25,17 @@ import org.jfree.data.gantt.TaskSeriesCollection;
 import org.jfree.data.time.Day;
 import org.jfree.data.time.Week;
 import org.jfree.ui.TextAnchor;
+
+import storybook.model.BookModel;
+import storybook.model.hbn.dao.ChapterDAOImpl;
+import storybook.model.hbn.dao.PersonDAOImpl;
+import storybook.model.hbn.entity.Chapter;
+import storybook.model.hbn.entity.Part;
+import storybook.model.hbn.entity.Person;
+import storybook.model.hbn.entity.Scene;
+import storybook.toolkit.I18N;
+import storybook.ui.MainFrame;
+import storybook.ui.chart.jfreechart.ChartUtil;
 
 public class PersonsByDateChart extends AbstractPersonsChart {
 

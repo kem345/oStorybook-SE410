@@ -12,6 +12,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
 import javax.swing.KeyStroke;
+
 import storybook.ui.MainFrame;
 
 @SuppressWarnings("serial")

@@ -1,5 +1,23 @@
 package storybook.ui.chart;
 
+import java.awt.Dimension;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
+
+import javax.swing.JLabel;
+import javax.swing.JSlider;
+import javax.swing.JTable;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+import javax.swing.table.TableColumn;
+
+import org.apache.commons.lang3.ArrayUtils;
+import org.hibernate.Session;
+
 import storybook.model.BookModel;
 import storybook.model.hbn.dao.LocationDAOImpl;
 import storybook.model.hbn.dao.PersonDAOImpl;
@@ -14,26 +32,6 @@ import storybook.toolkit.swing.SwingUtil;
 import storybook.toolkit.swing.table.FixedColumnScrollPane;
 import storybook.ui.MainFrame;
 import storybook.ui.chart.legend.PersonsLegendPanel;
-import java.awt.Dimension;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JSlider;
-import javax.swing.JTable;
-import javax.swing.JViewport;
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
-import javax.swing.table.JTableHeader;
-import javax.swing.table.TableColumn;
-import javax.swing.table.TableColumnModel;
-import org.apache.commons.lang3.ArrayUtils;
-import org.hibernate.Session;
-import storybook.model.hbn.entity.Scene;
 
 public class WiWWChart extends AbstractPersonsChart
 	implements ChangeListener {

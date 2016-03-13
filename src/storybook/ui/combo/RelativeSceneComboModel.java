@@ -23,6 +23,7 @@ import java.util.List;
 import javax.swing.DefaultComboBoxModel;
 
 import org.hibernate.Session;
+
 import storybook.model.BookModel;
 import storybook.model.hbn.dao.SceneDAOImpl;
 import storybook.model.hbn.entity.Scene;

@@ -30,12 +30,11 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 
+import net.miginfocom.swing.MigLayout;
 import storybook.toolkit.I18N;
 import storybook.toolkit.swing.SwingUtil;
 import storybook.ui.MainFrame;
 import storybook.ui.dialog.AbstractDialog;
-
-import net.miginfocom.swing.MigLayout;
 
 @SuppressWarnings("serial")
 abstract public class AbstractRenameDialog extends AbstractDialog implements

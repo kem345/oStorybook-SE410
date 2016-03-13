@@ -28,6 +28,7 @@ import javax.swing.JScrollPane;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.text.JTextComponent;
 
+import net.miginfocom.swing.MigLayout;
 import storybook.SbConstants;
 import storybook.SbConstants.BookKey;
 import storybook.action.EditEntityAction;
@@ -39,11 +40,9 @@ import storybook.toolkit.I18N;
 import storybook.toolkit.swing.FontUtil;
 import storybook.toolkit.swing.SwingUtil;
 import storybook.toolkit.swing.undo.UndoableTextArea;
-import storybook.ui.panel.AbstractPanel;
 import storybook.ui.MainFrame;
 import storybook.ui.label.SceneStateLabel;
-
-import net.miginfocom.swing.MigLayout;
+import storybook.ui.panel.AbstractPanel;
 
 /**
  * @author martin

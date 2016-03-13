@@ -15,9 +15,10 @@
  */
 package storybook.ui.memoria;
 
+import org.apache.commons.collections15.Transformer;
+
 import storybook.model.EntityUtil;
 import storybook.model.hbn.entity.AbstractEntity;
-import org.apache.commons.collections15.Transformer;
 
 public class EntityTransformer
 	implements Transformer<AbstractEntity, String> {

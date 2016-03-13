@@ -32,6 +32,7 @@ import javax.swing.SwingConstants;
 import net.miginfocom.swing.MigLayout;
 
 import org.hibernate.Session;
+
 import storybook.SbApp;
 import storybook.SbConstants;
 import storybook.SbConstants.BookKey;
@@ -47,9 +48,9 @@ import storybook.toolkit.BookUtil;
 import storybook.toolkit.I18N;
 import storybook.toolkit.swing.SwingUtil;
 import storybook.toolkit.swing.label.VerticalLabelUI;
-import storybook.ui.panel.AbstractPanel;
 import storybook.ui.MainFrame;
 import storybook.ui.interfaces.IRefreshable;
+import storybook.ui.panel.AbstractPanel;
 import storybook.ui.panel.manage.dnd.DTScenePanel;
 import storybook.ui.panel.manage.dnd.SceneTransferHandler;
 

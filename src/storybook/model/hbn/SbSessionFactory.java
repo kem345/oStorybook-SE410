@@ -18,18 +18,17 @@
 package storybook.model.hbn;
 
 import java.util.List;
+import java.util.logging.Level;
 
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+
+import storybook.SbApp;
 import storybook.model.hbn.entity.AbstractEntity;
 
 import com.googlecode.genericdao.dao.hibernate.GenericDAOImpl;
-import com.mchange.v2.log.MLevel;
-import static com.mchange.v2.log.MLevel.OFF;
-import java.util.logging.Level;
-import org.hibernate.HibernateException;
-import storybook.SbApp;
 
 public class SbSessionFactory {
 
@@ -55,19 +54,25 @@ public class SbSessionFactory {
 	public void init(String filename) {
 		SbApp.trace("SbSessionFactory.init()");
 		if (SbApp.getTraceHibernate()) {
-			java.util.logging.Logger.getLogger("org.hibernate").setLevel(Level.INFO);
+			java.util.logging.Logger.getLogger("org.hibernate").setLevel(
+					Level.INFO);
 		} else {
-			java.util.logging.Logger.getLogger("org.hibernate").setLevel(Level.OFF);
+			java.util.logging.Logger.getLogger("org.hibernate").setLevel(
+					Level.OFF);
 		}
+
 		try {
 			// create the SessionFactory from given config file
-			// modif favdb remplacement du configFile par la programmation directe
-			//System.out.println("filename="+filename);
-			//System.out.println("configFile="+configFile);
-			Configuration config = new Configuration()/*.configure(configFile)*/;
+			// modif favdb remplacement du configFile par la programmation
+			// directe
+			// System.out.println("filename="+filename);
+			// System.out.println("configFile="+configFile);
+			Configuration config = new Configuration()/* .configure(configFile) */;
 			config.setProperty("hibernate.show_sql", "false");
-			config.setProperty("hibernate.dialect", "org.hibernate.dialect.H2Dialect");
-			config.setProperty("hibernate.connection.driver_class", "org.h2.Driver");
+			config.setProperty("hibernate.dialect",
+					"org.hibernate.dialect.H2Dialect");
+			config.setProperty("hibernate.connection.driver_class",
+					"org.h2.Driver");
 			String dbURL = "jdbc:h2:" + filename;
 			if (SbApp.getTraceHibernate()) {
 				dbURL += ";TRACE_LEVEL_FILE=3;TRACE_LEVEL_SYSTEM_OUT=3";
@@ -79,12 +84,16 @@ public class SbSessionFactory {
 			config.setProperty("hibernate.connection.password", "");
 			config.setProperty("hibernate.hbm2ddl.auto", "update");
 			if (SbApp.getTraceHibernate()) {
-				java.util.Properties p = new java.util.Properties(System.getProperties());
-				p.put("com.mchange.v2.log.MLog", "com.mchange.v2.log.FallbackMLog");
-				p.put("com.mchange.v2.log.FallbackMLog.DEFAULT_CUTOFF_LEVEL", "OFF");
+				java.util.Properties p = new java.util.Properties(
+						System.getProperties());
+				p.put("com.mchange.v2.log.MLog",
+						"com.mchange.v2.log.FallbackMLog");
+				p.put("com.mchange.v2.log.FallbackMLog.DEFAULT_CUTOFF_LEVEL",
+						"OFF");
 				System.setProperties(p);
 			}
-			config.setProperty("connection.provider_class", "org.hibernate.connection.C3P0ConnectionProvider");
+			config.setProperty("connection.provider_class",
+					"org.hibernate.connection.C3P0ConnectionProvider");
 			config.setProperty("hibernate.c3p0.debug", "0");
 			config.setProperty("hibernate.c3p0.min_size", "0");
 			config.setProperty("hibernate.c3p0.max_size", "1");
@@ -93,29 +102,31 @@ public class SbSessionFactory {
 			config.setProperty("hibernate.c3p0.idle_test_period", "300");
 			config.setProperty("hibernate.c3p0.acquire_increment", "2");
 			config.setProperty("current_session_context_class", "thread");
-			config.setProperty("hibernate.cache.provider_class", "org.hibernate.cache.HashtableCacheProvider");
-			config.setProperty("hibernate.current_session_context_class", "thread");
-			//if (configFile.contains("preference")) {
-				config.addClass(storybook.model.hbn.entity.Preference.class);
-			//} else {
-				config.addClass(storybook.model.hbn.entity.Part.class);
-				config.addClass(storybook.model.hbn.entity.Chapter.class);
-				config.addClass(storybook.model.hbn.entity.Scene.class);
-				config.addClass(storybook.model.hbn.entity.Gender.class);
-				config.addClass(storybook.model.hbn.entity.Person.class);
-				config.addClass(storybook.model.hbn.entity.Relationship.class);
-				config.addClass(storybook.model.hbn.entity.Location.class);
-				config.addClass(storybook.model.hbn.entity.Strand.class);
-				config.addClass(storybook.model.hbn.entity.AbstractTag.class);
-				config.addClass(storybook.model.hbn.entity.AbstractTagLink.class);
-				config.addClass(storybook.model.hbn.entity.Idea.class);
-				config.addClass(storybook.model.hbn.entity.Internal.class);
-				config.addClass(storybook.model.hbn.entity.Category.class);
-				config.addClass(storybook.model.hbn.entity.Attribute.class);
-				config.addClass(storybook.model.hbn.entity.TimeEvent.class);
-			//}
+			config.setProperty("hibernate.cache.provider_class",
+					"org.hibernate.cache.HashtableCacheProvider");
+			config.setProperty("hibernate.current_session_context_class",
+					"thread");
+			// if (configFile.contains("preference")) {
+			config.addClass(storybook.model.hbn.entity.Preference.class);
+			// } else {
+			config.addClass(storybook.model.hbn.entity.Part.class);
+			config.addClass(storybook.model.hbn.entity.Chapter.class);
+			config.addClass(storybook.model.hbn.entity.Scene.class);
+			config.addClass(storybook.model.hbn.entity.Gender.class);
+			config.addClass(storybook.model.hbn.entity.Person.class);
+			config.addClass(storybook.model.hbn.entity.Relationship.class);
+			config.addClass(storybook.model.hbn.entity.Location.class);
+			config.addClass(storybook.model.hbn.entity.Strand.class);
+			config.addClass(storybook.model.hbn.entity.AbstractTag.class);
+			config.addClass(storybook.model.hbn.entity.AbstractTagLink.class);
+			config.addClass(storybook.model.hbn.entity.Idea.class);
+			config.addClass(storybook.model.hbn.entity.Internal.class);
+			config.addClass(storybook.model.hbn.entity.Category.class);
+			config.addClass(storybook.model.hbn.entity.Attribute.class);
+			config.addClass(storybook.model.hbn.entity.TimeEvent.class);
+			// }
 			sessionFactory = config.buildSessionFactory();
-		} catch (SecurityException | HibernateException ex) {
+		} catch (SecurityException | HibernateException | NoSuchFieldError ex) {
 			// make sure you log the exception, as it might be swallowed
 			System.err.println("SbSessionFactory.init()");
 			System.err.println("*** Initial SessionFactory creation failed: ");
@@ -127,11 +138,11 @@ public class SbSessionFactory {
 	public void query(GenericDAOImpl<? extends AbstractEntity, ?> dao) {
 		if (SbApp.getTrace()) {
 			System.out.println("SbSessionFactory.query(): "
-				+ dao.getClass().getSimpleName());
+					+ dao.getClass().getSimpleName());
 			List<? extends AbstractEntity> entities = dao.findAll();
 			for (AbstractEntity entity : entities) {
 				String name = entity.getClass().getSimpleName();
-				//System.out.println("  " + name + ": " + entity.toString());
+				// System.out.println("  " + name + ": " + entity.toString());
 			}
 		}
 	}

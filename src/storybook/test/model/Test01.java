@@ -19,11 +19,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 package storybook.test.model;
 
 import java.util.Calendar;
-import java.util.Iterator;
 import java.util.List;
 
-import org.hibernate.Query;
 import org.hibernate.Session;
+
 import storybook.model.hbn.SbSessionFactory;
 import storybook.model.hbn.dao.ChapterDAOImpl;
 import storybook.model.hbn.dao.GenderDAOImpl;
@@ -40,10 +39,7 @@ import storybook.model.hbn.dao.TagLinkDAOImpl;
 import storybook.model.hbn.entity.Chapter;
 import storybook.model.hbn.entity.Gender;
 import storybook.model.hbn.entity.Idea;
-import storybook.model.hbn.entity.Location;
 import storybook.model.hbn.entity.Person;
-import storybook.model.hbn.entity.Scene;
-import storybook.model.hbn.entity.Strand;
 
 import com.googlecode.genericdao.search.Filter;
 import com.googlecode.genericdao.search.Search;

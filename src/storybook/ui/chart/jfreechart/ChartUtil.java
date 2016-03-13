@@ -15,14 +15,13 @@
  */
 package storybook.ui.chart.jfreechart;
 
-import storybook.toolkit.I18N;
-import storybook.toolkit.swing.ColorUtil;
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Font;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.TreeSet;
+
 import org.apache.commons.lang3.time.DateUtils;
 import org.jfree.chart.LegendItemCollection;
 import org.jfree.chart.axis.CategoryAxis;
@@ -37,6 +36,9 @@ import org.jfree.chart.renderer.AbstractRenderer;
 import org.jfree.data.category.CategoryDataset;
 import org.jfree.ui.RectangleAnchor;
 import org.jfree.ui.TextAnchor;
+
+import storybook.toolkit.I18N;
+import storybook.toolkit.swing.ColorUtil;
 
 /**
  *

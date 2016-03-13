@@ -5,6 +5,16 @@
 package storybook.exporter;
 
 import java.awt.HeadlessException;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+
+import javax.swing.JOptionPane;
+
+import org.apache.commons.lang3.StringUtils;
+import org.hibernate.Session;
+
+import storybook.SbApp;
 import storybook.model.BookModel;
 import storybook.model.hbn.dao.ChapterDAOImpl;
 import storybook.model.hbn.dao.PartDAOImpl;
@@ -12,22 +22,12 @@ import storybook.model.hbn.dao.SceneDAOImpl;
 import storybook.model.hbn.entity.Chapter;
 import storybook.model.hbn.entity.Part;
 import storybook.model.hbn.entity.Scene;
-import storybook.toolkit.DateUtil;
 import storybook.toolkit.BookUtil;
+import storybook.toolkit.DateUtil;
 import storybook.toolkit.I18N;
 import storybook.toolkit.LangUtil;
-import storybook.toolkit.html.HtmlSelection;
-import storybook.ui.MainFrame;
-import java.awt.Toolkit;
-import java.awt.datatransfer.Clipboard;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import javax.swing.JOptionPane;
-import org.apache.commons.lang3.StringUtils;
-import org.hibernate.Session;
-import storybook.SbApp;
 import storybook.toolkit.TextTransfer;
+import storybook.ui.MainFrame;
 
 /**
  *

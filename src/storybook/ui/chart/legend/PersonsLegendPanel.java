@@ -19,7 +19,9 @@ import java.awt.Dimension;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.Set;
+
 import javax.swing.JLabel;
+
 import net.miginfocom.swing.MigLayout;
 import storybook.model.hbn.entity.Person;
 import storybook.toolkit.swing.ColorUtil;

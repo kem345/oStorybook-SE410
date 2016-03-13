@@ -24,8 +24,8 @@ import storybook.model.hbn.dao.GenderDAOImpl;
 import storybook.model.hbn.entity.AbstractEntity;
 import storybook.model.hbn.entity.Gender;
 import storybook.ui.MainFrame;
-import storybook.ui.table.SbColumnFactory;
 import storybook.ui.combo.GenderListCellRenderer;
+import storybook.ui.table.SbColumnFactory;
 
 /**
  * @author martin

@@ -3,8 +3,8 @@ package storybook.ui.panel;
 import java.beans.PropertyChangeEvent;
 
 import javax.swing.JPanel;
-import storybook.ui.MainFrame;
 
+import storybook.ui.MainFrame;
 import storybook.ui.interfaces.IPaintable;
 import storybook.ui.interfaces.IRefreshable;
 

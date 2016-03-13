@@ -7,6 +7,7 @@ import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 
 import org.apache.commons.lang3.time.FastDateFormat;
+
 import storybook.toolkit.I18N;
 import storybook.toolkit.swing.SwingUtil;
 
