@@ -17,13 +17,10 @@
  */
 package storybook.ui.dialog;
 
-import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Locale;
-import java.util.Map;
-import java.util.TreeMap;
 
 import javax.swing.AbstractAction;
 import javax.swing.BorderFactory;
@@ -35,12 +32,12 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 import javax.swing.JTextField;
-import javax.swing.UIManager;
 import javax.swing.event.CaretEvent;
 import javax.swing.event.CaretListener;
 
-import storybook.SbConstants;
+import net.miginfocom.swing.MigLayout;
 import storybook.SbApp;
+import storybook.SbConstants;
 import storybook.SbConstants.Language;
 import storybook.SbConstants.LookAndFeel;
 import storybook.SbConstants.PreferenceKey;
@@ -51,8 +48,6 @@ import storybook.toolkit.PrefUtil;
 import storybook.toolkit.SpellCheckerUtil;
 import storybook.toolkit.net.NetUtil;
 import storybook.toolkit.swing.SwingUtil;
-
-import net.miginfocom.swing.MigLayout;
 
 /**
  * @author martin

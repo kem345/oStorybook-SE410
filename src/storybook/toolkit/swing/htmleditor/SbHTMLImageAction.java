@@ -6,20 +6,18 @@ import java.awt.Window;
 import java.awt.event.ActionEvent;
 
 import javax.swing.Action;
-import static javax.swing.Action.SMALL_ICON;
 import javax.swing.JEditorPane;
 import javax.swing.SwingUtilities;
 import javax.swing.text.JTextComponent;
 import javax.swing.text.html.HTML;
 
-import storybook.toolkit.swing.SwingUtil;
-
-//import shef.i18n.I18n;
-import shef.ui.UIUtils;
-import shef.ui.text.HTMLUtils;
-import shef.ui.text.actions.HTMLTextEditAction;
-import shef.ui.text.dialogs.ImageDialog;
+import net.atlanticbb.tantlinger.ui.UIUtils;
+import net.atlanticbb.tantlinger.ui.text.HTMLUtils;
+import net.atlanticbb.tantlinger.ui.text.actions.HTMLTextEditAction;
+import net.atlanticbb.tantlinger.ui.text.dialogs.ImageDialog;
 import storybook.toolkit.I18N;
+import storybook.toolkit.swing.SwingUtil;
+//import shef.i18n.I18n;
 
 @SuppressWarnings("serial")
 public class SbHTMLImageAction extends HTMLTextEditAction {

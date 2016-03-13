@@ -24,9 +24,10 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 import org.hibernate.Session;
+
+import storybook.SbApp;
 import storybook.SbConstants;
 import storybook.SbConstants.PreferenceKey;
-import storybook.SbApp;
 import storybook.model.hbn.dao.PreferenceDAOImpl;
 import storybook.toolkit.CommonTools;
 import storybook.ui.MainFrame;

@@ -15,8 +15,6 @@
  */
 package storybook.exporter;
 
-import com.itextpdf.text.Font;
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileInputStream;
@@ -28,6 +26,8 @@ import java.util.List;
 
 import storybook.SbApp;
 import storybook.toolkit.TextUtil;
+
+import com.itextpdf.text.Font;
 
 /**
  *

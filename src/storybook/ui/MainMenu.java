@@ -20,8 +20,6 @@ package storybook.ui;
 import javax.swing.Action;
 import javax.swing.JOptionPane;
 
-import com.sun.jaf.ui.ActionManager;
-
 import storybook.SbApp;
 import storybook.SbConstants;
 import storybook.SbConstants.ViewName;
@@ -65,6 +63,8 @@ import storybook.ui.dialog.rename.RenameCityDialog;
 import storybook.ui.dialog.rename.RenameCountryDialog;
 import storybook.ui.dialog.rename.RenameItemCategoryDialog;
 import storybook.ui.dialog.rename.RenameTagCategoryDialog;
+
+import com.sun.jaf.ui.ActionManager;
 
 /**
  *

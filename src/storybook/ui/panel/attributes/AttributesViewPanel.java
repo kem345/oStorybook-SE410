@@ -14,12 +14,16 @@ import java.awt.print.PrinterException;
 import java.beans.PropertyChangeEvent;
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextPane;
+
 import net.infonode.docking.View;
 import net.miginfocom.swing.MigLayout;
+
 import org.hibernate.Session;
+
 import storybook.SbConstants;
 import storybook.controller.BookController;
 import storybook.model.BookModel;
@@ -32,7 +36,6 @@ import storybook.toolkit.BookUtil;
 import storybook.toolkit.I18N;
 import storybook.toolkit.swing.SwingUtil;
 import storybook.ui.MainFrame;
-import storybook.ui.panel.AbstractPanel;
 import storybook.ui.panel.AbstractScrollPanel;
 
 /**

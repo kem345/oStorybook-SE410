@@ -23,6 +23,7 @@ import javax.swing.table.TableModel;
 import org.jdesktop.swingx.decorator.Highlighter;
 import org.jdesktop.swingx.table.ColumnFactory;
 import org.jdesktop.swingx.table.TableColumnExt;
+
 import storybook.SbApp;
 import storybook.toolkit.I18N;
 

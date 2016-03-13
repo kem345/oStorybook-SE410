@@ -15,18 +15,19 @@
  */
 package storybook.ui.chart;
 
+import java.awt.Color;
+import java.awt.Dimension;
+import java.util.Iterator;
+
+import javax.swing.JPanel;
+
+import net.miginfocom.swing.MigLayout;
 import storybook.model.hbn.entity.Person;
 import storybook.toolkit.swing.ColorUtil;
 import storybook.toolkit.swing.SwingUtil;
 import storybook.toolkit.swing.label.CleverLabel;
 import storybook.ui.interfaces.IPaintable;
 import storybook.ui.interfaces.IRefreshable;
-import java.awt.Color;
-import java.awt.Dimension;
-import java.util.Iterator;
-import java.util.List;
-import javax.swing.JPanel;
-import net.miginfocom.swing.MigLayout;
 
 public class WiWWPanel extends JPanel
   implements IRefreshable, IPaintable

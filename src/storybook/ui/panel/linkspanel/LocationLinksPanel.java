@@ -12,13 +12,14 @@ import net.miginfocom.swing.MigLayout;
 
 import org.hibernate.Session;
 import org.hibernate.UnresolvableObjectException;
+
 import storybook.controller.BookController;
 import storybook.model.BookModel;
 import storybook.model.hbn.entity.Location;
 import storybook.model.hbn.entity.Scene;
 import storybook.toolkit.swing.SwingUtil;
-import storybook.ui.panel.AbstractPanel;
 import storybook.ui.MainFrame;
+import storybook.ui.panel.AbstractPanel;
 
 @SuppressWarnings("serial")
 public class LocationLinksPanel extends AbstractPanel {

@@ -29,8 +29,6 @@ import java.awt.print.Printable;
 import java.awt.print.PrinterException;
 import java.awt.print.PrinterJob;
 import java.beans.PropertyChangeEvent;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -57,21 +55,21 @@ import storybook.model.hbn.entity.Internal;
 import storybook.model.hbn.entity.Part;
 import storybook.model.hbn.entity.Scene;
 import storybook.model.hbn.entity.Strand;
-import storybook.toolkit.DateUtil;
 import storybook.toolkit.BookUtil;
+import storybook.toolkit.DateUtil;
 import storybook.toolkit.I18N;
 import storybook.toolkit.ViewUtil;
 import storybook.toolkit.swing.ColorUtil;
 import storybook.toolkit.swing.SwingUtil;
 import storybook.toolkit.swing.label.VerticalLabelUI;
-import storybook.ui.panel.AbstractScrollPanel;
 import storybook.ui.MainFrame;
 import storybook.ui.SbView;
+import storybook.ui.options.ChronoOptionsDialog;
+import storybook.ui.panel.AbstractScrollPanel;
+import storybook.ui.panel.linkspanel.ItemLinksPanel;
 import storybook.ui.panel.linkspanel.LocationLinksPanel;
 import storybook.ui.panel.linkspanel.PersonLinksPanel;
 import storybook.ui.panel.linkspanel.StrandLinksPanel;
-import storybook.ui.options.ChronoOptionsDialog;
-import storybook.ui.panel.linkspanel.ItemLinksPanel;
 
 /**
  * @author martin

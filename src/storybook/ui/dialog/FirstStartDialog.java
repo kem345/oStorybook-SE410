@@ -28,6 +28,7 @@ import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import net.miginfocom.swing.MigLayout;
 import storybook.SbConstants.Language;
 import storybook.SbConstants.PreferenceKey;
 import storybook.SbConstants.Spelling;
@@ -36,8 +37,6 @@ import storybook.toolkit.PrefUtil;
 import storybook.toolkit.SpellCheckerUtil;
 import storybook.toolkit.swing.SwingUtil;
 import storybook.toolkit.swing.panel.BackgroundPanel;
-
-import net.miginfocom.swing.MigLayout;
 
 /**
  * @author martin

@@ -24,8 +24,8 @@ import storybook.model.hbn.dao.PersonDAOImpl;
 import storybook.model.hbn.entity.AbstractEntity;
 import storybook.model.hbn.entity.Person;
 import storybook.ui.MainFrame;
-import storybook.ui.table.SbColumnFactory;
 import storybook.ui.combo.PersonListCellRenderer;
+import storybook.ui.table.SbColumnFactory;
 
 /**
  * @author martin

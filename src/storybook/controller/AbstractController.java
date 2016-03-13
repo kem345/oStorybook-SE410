@@ -32,7 +32,6 @@ import storybook.SbApp;
 import storybook.model.AbstractModel;
 import storybook.model.EntityUtil;
 import storybook.model.hbn.entity.AbstractEntity;
-import storybook.ui.MainFrame;
 import storybook.ui.panel.AbstractPanel;
 
 public abstract class AbstractController implements PropertyChangeListener {

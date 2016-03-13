@@ -21,9 +21,7 @@ package storybook.action;
 
 import java.awt.event.ActionEvent;
 
-import storybook.SbConstants.ViewName;
 import storybook.SbApp;
-import storybook.controller.BookController;
 import storybook.model.hbn.entity.AbstractEntity;
 import storybook.toolkit.I18N;
 import storybook.ui.MainFrame;

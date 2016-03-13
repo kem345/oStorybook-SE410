@@ -19,8 +19,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 package storybook.toolkit;
 
 import java.io.File;
-import java.sql.Timestamp;
-import storybook.model.hbn.entity.Scene;
 
 import storybook.ui.MainFrame;
 

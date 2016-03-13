@@ -18,12 +18,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 package storybook.importer;
 
+import static storybook.toolkit.BookUtil.getHomeDir;
+
 import java.io.File;
+
 import javax.swing.DefaultListModel;
 import javax.swing.JFileChooser;
+
 import storybook.SbConstants;
 import storybook.model.hbn.entity.Preference;
-import static storybook.toolkit.BookUtil.getHomeDir;
 import storybook.toolkit.PrefUtil;
 import storybook.toolkit.filefilter.H2FileFilter;
 import storybook.ui.MainFrame;

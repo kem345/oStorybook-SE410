@@ -7,6 +7,7 @@
 package storybook.model.handler;
 
 import javax.swing.ListCellRenderer;
+
 import storybook.model.hbn.dao.AttributeDAOImpl;
 import storybook.model.hbn.entity.AbstractEntity;
 import storybook.model.hbn.entity.Attribute;

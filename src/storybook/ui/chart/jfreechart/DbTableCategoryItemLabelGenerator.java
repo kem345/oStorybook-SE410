@@ -17,6 +17,7 @@ package storybook.ui.chart.jfreechart;
 
 import org.jfree.chart.labels.CategoryItemLabelGenerator;
 import org.jfree.data.category.CategoryDataset;
+
 import storybook.model.hbn.entity.AbstractEntity;
 
 public class DbTableCategoryItemLabelGenerator

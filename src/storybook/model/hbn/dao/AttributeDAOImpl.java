@@ -22,6 +22,7 @@ import java.util.List;
 
 import org.hibernate.Query;
 import org.hibernate.Session;
+
 import storybook.model.hbn.entity.Attribute;
 
 public class AttributeDAOImpl extends SbGenericDAOImpl<Attribute, Long> implements

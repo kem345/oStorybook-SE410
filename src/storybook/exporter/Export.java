@@ -5,12 +5,15 @@
  */
 package storybook.exporter;
 
+import static storybook.toolkit.TextUtil.truncateText;
+
 import java.io.File;
 import java.util.List;
+
 import javax.swing.JOptionPane;
 
-import storybook.SbConstants;
 import storybook.SbApp;
+import storybook.SbConstants;
 import storybook.model.hbn.entity.Chapter;
 import storybook.model.hbn.entity.Idea;
 import storybook.model.hbn.entity.Item;
@@ -21,7 +24,6 @@ import storybook.model.hbn.entity.Scene;
 import storybook.model.hbn.entity.Tag;
 import storybook.toolkit.BookUtil;
 import storybook.toolkit.I18N;
-import static storybook.toolkit.TextUtil.truncateText;
 import storybook.toolkit.html.HtmlUtil;
 import storybook.ui.MainFrame;
 

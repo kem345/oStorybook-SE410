@@ -28,13 +28,12 @@ import javax.swing.JComboBox;
 import javax.swing.JLabel;
 
 import org.hibernate.Session;
+
 import storybook.SbApp;
 import storybook.SbConstants;
 import storybook.SbConstants.ViewName;
 import storybook.controller.BookController;
 import storybook.model.BookModel;
-import storybook.model.hbn.dao.LocationDAOImpl;
-import storybook.model.hbn.dao.PersonDAOImpl;
 import storybook.model.hbn.dao.SceneDAOImpl;
 import storybook.model.hbn.dao.StrandDAOImpl;
 import storybook.model.hbn.entity.AbstractEntity;

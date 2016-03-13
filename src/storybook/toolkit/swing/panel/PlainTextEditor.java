@@ -27,11 +27,10 @@ import javax.swing.JTextArea;
 import javax.swing.event.CaretEvent;
 import javax.swing.event.CaretListener;
 
+import net.miginfocom.swing.MigLayout;
 import storybook.toolkit.I18N;
 import storybook.toolkit.swing.SwingUtil;
 import storybook.ui.panel.AbstractPanel;
-
-import net.miginfocom.swing.MigLayout;
 
 /**
  * @author martin

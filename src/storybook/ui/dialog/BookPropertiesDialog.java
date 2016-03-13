@@ -44,9 +44,10 @@ import javax.swing.JTextField;
 import javax.swing.JTextPane;
 import javax.swing.border.BevelBorder;
 
+import net.miginfocom.swing.MigLayout;
+
 import org.hibernate.Session;
 
-import net.miginfocom.swing.MigLayout;
 import storybook.SbConstants.BookKey;
 import storybook.model.BookModel;
 import storybook.model.hbn.dao.ChapterDAOImpl;

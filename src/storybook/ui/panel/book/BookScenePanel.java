@@ -22,12 +22,11 @@ import java.beans.PropertyChangeEvent;
 
 import javax.swing.JPanel;
 
+import net.miginfocom.swing.MigLayout;
 import storybook.model.EntityUtil;
 import storybook.model.hbn.entity.Scene;
-import storybook.ui.panel.AbstractScenePanel;
 import storybook.ui.MainFrame;
-
-import net.miginfocom.swing.MigLayout;
+import storybook.ui.panel.AbstractScenePanel;
 
 @SuppressWarnings("serial")
 public class BookScenePanel extends AbstractScenePanel {

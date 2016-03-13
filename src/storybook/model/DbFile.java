@@ -19,8 +19,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 package storybook.model;
 
 import java.io.File;
-import storybook.SbApp;
 
+import storybook.SbApp;
 import storybook.SbConstants;
 
 /**

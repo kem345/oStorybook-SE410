@@ -26,6 +26,7 @@ import javax.swing.JList;
 import javax.swing.ListCellRenderer;
 
 import org.jdesktop.swingx.icon.EmptyIcon;
+
 import storybook.ui.memoria.EntityTypeCbItem;
 
 /**

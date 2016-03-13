@@ -29,11 +29,10 @@ import javax.swing.JFileChooser;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
+import net.miginfocom.swing.MigLayout;
 import storybook.toolkit.I18N;
 import storybook.toolkit.swing.IconButton;
 import storybook.ui.dialog.AbstractDialog;
-
-import net.miginfocom.swing.MigLayout;
 
 /**
  * @author martin

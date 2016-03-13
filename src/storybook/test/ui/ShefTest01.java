@@ -24,9 +24,8 @@ import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 import javax.swing.WindowConstants;
 
-import storybook.toolkit.swing.htmleditor.HtmlEditor;
-
 import net.miginfocom.swing.MigLayout;
+import storybook.toolkit.swing.htmleditor.HtmlEditor;
 
 /**
  * @author martin

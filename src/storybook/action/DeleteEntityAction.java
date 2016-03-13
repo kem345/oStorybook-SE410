@@ -18,14 +18,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 package storybook.action;
 
-import java.awt.Component;
+import static storybook.toolkit.swing.SwingUtil.showModalDialog;
+
 import java.awt.event.ActionEvent;
 import java.util.List;
 
 import javax.swing.JOptionPane;
 
 import org.hibernate.Session;
-import storybook.SbConstants.ViewName;
+
 import storybook.controller.BookController;
 import storybook.model.BookModel;
 import storybook.model.EntityUtil;
@@ -33,10 +34,8 @@ import storybook.model.hbn.dao.PartDAOImpl;
 import storybook.model.hbn.entity.AbstractEntity;
 import storybook.model.hbn.entity.Part;
 import storybook.toolkit.I18N;
-import static storybook.toolkit.swing.SwingUtil.showModalDialog;
 import storybook.ui.MainFrame;
 import storybook.ui.dialog.dlgConfirmDelete;
-import storybook.ui.edit.EntityEditor;
 
 /**
  * @author martin

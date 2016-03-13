@@ -8,23 +8,17 @@ package storybook.ui.chart;
  *
  * @author favdb
  */
-import storybook.model.BookModel;
-import storybook.model.EntityUtil;
-import storybook.model.hbn.dao.LocationDAOImpl;
-import storybook.model.hbn.dao.SceneDAOImpl;
-import storybook.model.hbn.entity.Location;
-import storybook.toolkit.I18N;
-import storybook.ui.MainFrame;
-import storybook.ui.chart.jfreechart.ChartUtil;
-import storybook.ui.chart.jfreechart.DbTableCategoryItemLabelGenerator;
 import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+
 import javax.swing.JCheckBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+
 import net.miginfocom.swing.MigLayout;
+
 import org.hibernate.Session;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
@@ -36,6 +30,16 @@ import org.jfree.chart.renderer.category.BarRenderer;
 import org.jfree.data.category.CategoryDataset;
 import org.jfree.data.category.DefaultCategoryDataset;
 import org.jfree.ui.Layer;
+
+import storybook.model.BookModel;
+import storybook.model.EntityUtil;
+import storybook.model.hbn.dao.LocationDAOImpl;
+import storybook.model.hbn.dao.SceneDAOImpl;
+import storybook.model.hbn.entity.Location;
+import storybook.toolkit.I18N;
+import storybook.ui.MainFrame;
+import storybook.ui.chart.jfreechart.ChartUtil;
+import storybook.ui.chart.jfreechart.DbTableCategoryItemLabelGenerator;
 
 public class OccurrenceOfLocationsChart extends AbstractChartPanel {
 

@@ -15,16 +15,17 @@
  */
 package storybook.ui.memoria;
 
+import java.awt.Point;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+
+import javax.swing.JPopupMenu;
+
 import storybook.model.EntityUtil;
 import storybook.model.hbn.entity.AbstractEntity;
 import edu.uci.ics.jung.algorithms.layout.GraphElementAccessor;
 import edu.uci.ics.jung.visualization.VisualizationViewer;
 import edu.uci.ics.jung.visualization.control.AbstractPopupGraphMousePlugin;
-import java.awt.Point;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.awt.geom.Point2D;
-import javax.swing.JPopupMenu;
 
 public class MemoriaGraphMouse extends AbstractPopupGraphMousePlugin
 	implements MouseListener {

@@ -25,7 +25,6 @@ import javax.swing.JLabel;
 import javax.swing.JList;
 
 import storybook.model.state.TimeStepState;
-import storybook.toolkit.I18N;
 
 /**
  * @author jean

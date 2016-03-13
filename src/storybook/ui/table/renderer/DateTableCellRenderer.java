@@ -18,12 +18,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 package storybook.ui.table.renderer;
 
-import java.text.DateFormat;
 import java.util.Date;
 
 import javax.swing.table.DefaultTableCellRenderer;
 
-import storybook.toolkit.DateUtil;
 import storybook.toolkit.I18N;
 
 /**

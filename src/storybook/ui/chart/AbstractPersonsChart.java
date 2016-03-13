@@ -19,8 +19,10 @@ import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+
 import javax.swing.JCheckBox;
 import javax.swing.JLabel;
+
 import storybook.SbConstants;
 import storybook.model.EntityUtil;
 import storybook.model.hbn.entity.Category;

@@ -25,11 +25,10 @@ import java.beans.PropertyChangeEvent;
 import javax.swing.BorderFactory;
 import javax.swing.JLabel;
 
+import net.miginfocom.swing.MigLayout;
 import storybook.SbConstants;
 import storybook.toolkit.I18N;
 import storybook.toolkit.swing.SwingUtil;
-
-import net.miginfocom.swing.MigLayout;
 import storybook.ui.MainFrame;
 
 /**

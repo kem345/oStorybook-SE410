@@ -15,6 +15,8 @@
  */
 package storybook.ui.memoria;
 
+import javax.swing.Icon;
+
 import storybook.model.EntityUtil;
 import storybook.model.hbn.entity.AbstractEntity;
 import storybook.model.hbn.entity.Item;
@@ -22,7 +24,6 @@ import storybook.model.hbn.entity.Location;
 import storybook.model.hbn.entity.Person;
 import storybook.model.hbn.entity.Scene;
 import storybook.model.hbn.entity.Tag;
-import javax.swing.Icon;
 
 public class EntityTypeCbItem {
 

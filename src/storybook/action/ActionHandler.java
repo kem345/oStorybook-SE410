@@ -20,9 +20,6 @@
 package storybook.action;
 
 import java.awt.Desktop;
-import java.awt.Toolkit;
-import java.awt.datatransfer.Clipboard;
-import java.awt.datatransfer.StringSelection;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
@@ -31,17 +28,15 @@ import javax.swing.Action;
 import javax.swing.JOptionPane;
 import javax.swing.Timer;
 
+import net.infonode.docking.View;
+
 import org.apache.commons.io.FileUtils;
 import org.hibernate.Session;
 
-import com.sun.jaf.ui.ActionManager;
-
-import net.infonode.docking.View;
 import storybook.SbApp;
 import storybook.SbConstants;
 import storybook.SbConstants.BookKey;
 import storybook.SbConstants.ViewName;
-import storybook.exporter.BookExporter;
 import storybook.model.BookModel;
 import storybook.model.DbFile;
 import storybook.model.EntityUtil;
@@ -49,18 +44,14 @@ import storybook.model.hbn.dao.PartDAOImpl;
 import storybook.model.hbn.entity.Internal;
 import storybook.model.hbn.entity.Part;
 import storybook.toolkit.BookUtil;
-import storybook.toolkit.DockingWindowUtil;
 import storybook.toolkit.EnvUtil;
 import storybook.toolkit.I18N;
-import storybook.toolkit.net.NetUtil;
 import storybook.toolkit.odt.ODTUtils;
 import storybook.toolkit.swing.SwingUtil;
 import storybook.ui.MainFrame;
 import storybook.ui.SbView;
-import storybook.ui.dialog.AboutDialog;
 import storybook.ui.dialog.BookPropertiesDialog;
 import storybook.ui.dialog.CreateChaptersDialog;
-import storybook.ui.dialog.ManageLayoutsDialog;
 import storybook.ui.dialog.PreferencesDialog;
 import storybook.ui.dialog.WaitDialog;
 import storybook.ui.dialog.file.ExportBookFileDialog;
@@ -70,6 +61,8 @@ import storybook.ui.dialog.rename.RenameCityDialog;
 import storybook.ui.dialog.rename.RenameCountryDialog;
 import storybook.ui.dialog.rename.RenameItemCategoryDialog;
 import storybook.ui.dialog.rename.RenameTagCategoryDialog;
+
+import com.sun.jaf.ui.ActionManager;
 
 /**
  * @author martin

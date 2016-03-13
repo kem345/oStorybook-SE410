@@ -29,8 +29,8 @@ import javax.swing.JOptionPane;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 
-import storybook.SbConstants;
 import storybook.SbApp;
+import storybook.SbConstants;
 import storybook.model.DbFile;
 import storybook.toolkit.I18N;
 import storybook.toolkit.swing.SwingUtil;

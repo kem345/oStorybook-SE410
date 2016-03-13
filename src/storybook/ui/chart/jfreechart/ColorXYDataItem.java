@@ -16,6 +16,7 @@
 package storybook.ui.chart.jfreechart;
 
 import java.awt.Color;
+
 import org.jfree.data.xy.XYDataItem;
 
 public class ColorXYDataItem extends XYDataItem {

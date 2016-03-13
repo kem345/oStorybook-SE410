@@ -31,9 +31,8 @@ import javax.swing.JScrollPane;
 import javax.swing.SwingUtilities;
 import javax.swing.WindowConstants;
 
-import storybook.toolkit.swing.panel.GradientPanel;
-
 import net.miginfocom.swing.MigLayout;
+import storybook.toolkit.swing.panel.GradientPanel;
 
 /**
  * @author martin

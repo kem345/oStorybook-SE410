@@ -32,6 +32,7 @@ import net.infonode.docking.View;
 import net.miginfocom.swing.MigLayout;
 
 import org.hibernate.Session;
+
 import storybook.SbConstants;
 import storybook.SbConstants.BookKey;
 import storybook.SbConstants.ViewName;
@@ -46,10 +47,10 @@ import storybook.toolkit.BookUtil;
 import storybook.toolkit.I18N;
 import storybook.toolkit.ViewUtil;
 import storybook.toolkit.swing.SwingUtil;
-import storybook.ui.panel.AbstractScrollPanel;
 import storybook.ui.MainFrame;
 import storybook.ui.SbView;
 import storybook.ui.options.BookOptionsDialog;
+import storybook.ui.panel.AbstractScrollPanel;
 
 /**
  * @author martin

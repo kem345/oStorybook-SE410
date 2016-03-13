@@ -29,10 +29,11 @@ import net.infonode.docking.View;
 import net.miginfocom.swing.MigLayout;
 
 import org.hibernate.Session;
+
 import storybook.SbConstants.BookKey;
 import storybook.controller.BookController;
-import storybook.model.DbFile;
 import storybook.model.BookModel;
+import storybook.model.DbFile;
 import storybook.model.EntityUtil;
 import storybook.model.hbn.entity.AbstractEntity;
 import storybook.model.hbn.entity.Internal;
@@ -40,8 +41,8 @@ import storybook.toolkit.BookUtil;
 import storybook.toolkit.I18N;
 import storybook.toolkit.net.NetUtil;
 import storybook.toolkit.swing.SwingUtil;
-import storybook.ui.panel.AbstractPanel;
 import storybook.ui.MainFrame;
+import storybook.ui.panel.AbstractPanel;
 
 /**
  * @author martin

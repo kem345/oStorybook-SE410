@@ -10,10 +10,10 @@ import javax.swing.table.TableCellRenderer;
 import storybook.toolkit.I18N;
 import storybook.toolkit.completer.AbstractCompleter;
 import storybook.toolkit.swing.verifier.AbstractInputVerifier;
+import storybook.ui.RadioButtonGroup;
 import storybook.ui.edit.CbPanelDecorator;
 
 import com.googlecode.genericdao.search.Search;
-import storybook.ui.RadioButtonGroup;
 
 public class SbColumn {
 

@@ -33,8 +33,9 @@ import javax.swing.JTextField;
 import net.miginfocom.swing.MigLayout;
 
 import org.hibernate.Session;
-import storybook.SbConstants;
+
 import storybook.SbApp;
+import storybook.SbConstants;
 import storybook.SbConstants.PreferenceKey;
 import storybook.model.PreferenceModel;
 import storybook.model.hbn.dao.PreferenceDAOImpl;

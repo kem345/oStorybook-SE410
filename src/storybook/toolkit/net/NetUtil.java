@@ -24,8 +24,8 @@ import java.io.UnsupportedEncodingException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URLEncoder;
-import storybook.SbApp;
 
+import storybook.SbApp;
 import storybook.SbConstants;
 
 public class NetUtil {

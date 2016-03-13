@@ -1,9 +1,6 @@
 package storybook.toolkit.html;
 
 import java.awt.Color;
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.StringWriter;
 import java.util.regex.Matcher;
@@ -15,7 +12,6 @@ import javax.swing.text.html.HTMLWriter;
 
 import org.jsoup.Jsoup;
 
-import storybook.SbApp;
 import storybook.toolkit.TextUtil;
 import storybook.toolkit.swing.ColorUtil;
 

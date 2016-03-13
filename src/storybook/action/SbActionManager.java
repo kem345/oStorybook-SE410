@@ -22,13 +22,7 @@ import java.awt.Event;
 import java.awt.event.KeyEvent;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
-import java.io.File;
-import java.io.InputStream;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Set;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import javax.swing.Action;
 import javax.swing.ButtonGroup;
@@ -39,27 +33,25 @@ import javax.swing.JRadioButtonMenuItem;
 import javax.swing.JToolBar;
 
 import org.hibernate.Session;
-import storybook.SbConstants;
+
 import storybook.SbApp;
+import storybook.SbConstants;
 import storybook.SbConstants.PreferenceKey;
 import storybook.controller.BookController;
-import storybook.model.DbFile;
 import storybook.model.BookModel;
+import storybook.model.DbFile;
 import storybook.model.PreferenceModel;
 import storybook.model.hbn.dao.PartDAOImpl;
 import storybook.model.hbn.dao.PreferenceDAOImpl;
 import storybook.model.hbn.entity.Part;
 import storybook.model.hbn.entity.Preference;
 import storybook.toolkit.I18N;
-import storybook.toolkit.IOUtil;
 import storybook.toolkit.PrefUtil;
 import storybook.toolkit.swing.SwingUtil;
 import storybook.ui.MainFrame;
+import storybook.ui.MainMenu;
 
 import com.sun.jaf.ui.ActionManager;
-import com.sun.jaf.ui.UIFactory;
-import java.io.IOException;
-import storybook.ui.MainMenu;
 
 /**
  * @author martin

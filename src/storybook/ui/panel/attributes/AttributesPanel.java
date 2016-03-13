@@ -29,13 +29,14 @@ import javax.swing.JButton;
 import net.miginfocom.swing.MigLayout;
 
 import org.hibernate.Session;
+
 import storybook.model.BookModel;
 import storybook.model.hbn.dao.AttributeDAOImpl;
 import storybook.model.hbn.entity.Attribute;
 import storybook.toolkit.I18N;
 import storybook.toolkit.swing.IconButton;
-import storybook.ui.panel.AbstractPanel;
 import storybook.ui.MainFrame;
+import storybook.ui.panel.AbstractPanel;
 
 /**
  * @author martin

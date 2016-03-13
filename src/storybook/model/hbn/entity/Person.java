@@ -18,6 +18,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 package storybook.model.hbn.entity;
 
+import static storybook.toolkit.DateUtil.clearTime;
+
 import java.awt.Color;
 import java.util.Calendar;
 import java.util.Date;
@@ -26,7 +28,6 @@ import java.util.List;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
-import static storybook.toolkit.DateUtil.clearTime;
 
 import storybook.toolkit.swing.ColorUtil;
 

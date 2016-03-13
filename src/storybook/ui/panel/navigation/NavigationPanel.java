@@ -22,13 +22,12 @@ import java.beans.PropertyChangeEvent;
 
 import javax.swing.JTabbedPane;
 
-import storybook.controller.BookController;
-import storybook.toolkit.I18N;
-import storybook.ui.panel.AbstractPanel;
-import storybook.ui.MainFrame;
-
 import net.infonode.docking.View;
 import net.miginfocom.swing.MigLayout;
+import storybook.controller.BookController;
+import storybook.toolkit.I18N;
+import storybook.ui.MainFrame;
+import storybook.ui.panel.AbstractPanel;
 
 /**
  * @author martin

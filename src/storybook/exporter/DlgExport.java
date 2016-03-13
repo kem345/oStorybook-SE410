@@ -20,16 +20,12 @@ package storybook.exporter;
 
 import java.awt.event.ItemEvent;
 import java.io.File;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 import javax.swing.JFileChooser;
-import javax.swing.JOptionPane;
 
 import org.apache.commons.io.FileUtils;
-import org.h2.tools.Script;
 
 import storybook.SbConstants;
 import storybook.model.hbn.entity.Internal;
@@ -502,22 +498,22 @@ public class DlgExport extends javax.swing.JDialog {
 	}
 
 	private void doExportSQL() {
-		String url = "jdbc:h2:" + mainFrame.getDbFile().getDbName();
-		String file = /*txFolder.getText()+File.separator+*/mainFrame.getDbFile().getDbName()+".sql";
-		System.out.println("export to "+file);
-        try {
-			Script.process(url, "sa", "", file, "", "");
-			JOptionPane.showMessageDialog(this,
-					"Export SQL is OK.",
-					"SQL export",
-					JOptionPane.INFORMATION_MESSAGE);
-		} catch (SQLException ex) {
-			System.err.println("export SQL exception=" + ex.getMessage());
-			JOptionPane.showMessageDialog(this,
-					"An error occured during export SQL, please report this error.",
-					"SQL export error",
-					JOptionPane.ERROR_MESSAGE);
-		}
+//		String url = "jdbc:h2:" + mainFrame.getDbFile().getDbName();
+//		String file = /*txFolder.getText()+File.separator+*/mainFrame.getDbFile().getDbName()+".sql";
+//		System.out.println("export to "+file);
+//        try {
+//			Script.process(url, "sa", "", file, "", "");
+//			JOptionPane.showMessageDialog(this,
+//					"Export SQL is OK.",
+//					"SQL export",
+//					JOptionPane.INFORMATION_MESSAGE);
+//		} catch (SQLException ex) {
+//			System.err.println("export SQL exception=" + ex.getMessage());
+//			JOptionPane.showMessageDialog(this,
+//					"An error occured during export SQL, please report this error.",
+//					"SQL export error",
+//					JOptionPane.ERROR_MESSAGE);
+//		}
 	}
 
 }

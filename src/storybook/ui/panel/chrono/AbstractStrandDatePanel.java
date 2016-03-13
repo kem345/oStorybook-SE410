@@ -20,6 +20,7 @@ package storybook.ui.panel.chrono;
 
 import java.beans.PropertyChangeEvent;
 import java.util.Date;
+
 import org.hibernate.Session;
 
 import storybook.controller.BookController;
@@ -27,8 +28,8 @@ import storybook.model.BookModel;
 import storybook.model.hbn.dao.SceneDAOImpl;
 import storybook.model.hbn.entity.Scene;
 import storybook.model.hbn.entity.Strand;
-import storybook.ui.panel.AbstractPanel;
 import storybook.ui.MainFrame;
+import storybook.ui.panel.AbstractPanel;
 
 @SuppressWarnings("serial")
 public abstract class AbstractStrandDatePanel extends AbstractPanel {

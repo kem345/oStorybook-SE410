@@ -22,9 +22,8 @@ import java.awt.Frame;
 
 import javax.swing.JDialog;
 
-import storybook.ui.interfaces.IPaintable;
-
 import net.miginfocom.swing.MigLayout;
+import storybook.ui.interfaces.IPaintable;
 
 @SuppressWarnings("serial")
 public class SplashDialog extends JDialog implements IPaintable {

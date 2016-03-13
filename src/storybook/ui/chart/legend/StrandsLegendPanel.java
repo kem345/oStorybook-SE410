@@ -17,8 +17,11 @@ package storybook.ui.chart.legend;
 
 import java.awt.Dimension;
 import java.util.Iterator;
+
 import javax.swing.JLabel;
+
 import org.hibernate.Session;
+
 import storybook.model.BookModel;
 import storybook.model.hbn.dao.StrandDAOImpl;
 import storybook.model.hbn.entity.Strand;

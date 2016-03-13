@@ -25,10 +25,9 @@ import javax.swing.JPanel;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableCellRenderer;
 
+import net.miginfocom.swing.MigLayout;
 import storybook.toolkit.TextUtil;
 import storybook.toolkit.html.HtmlUtil;
-
-import net.miginfocom.swing.MigLayout;
 
 @SuppressWarnings("serial")
 public class HtmlTableCellRenderer extends DefaultTableCellRenderer {

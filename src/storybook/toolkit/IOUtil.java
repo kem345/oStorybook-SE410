@@ -23,8 +23,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import storybook.SbApp;
 
+import storybook.SbApp;
 import storybook.model.hbn.entity.AbstractEntity;
 import storybook.ui.MainFrame;
 

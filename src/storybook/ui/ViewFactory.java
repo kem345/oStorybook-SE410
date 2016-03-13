@@ -27,8 +27,10 @@ import javax.swing.table.TableColumn;
 
 import net.infonode.docking.View;
 import net.infonode.docking.util.StringViewMap;
+
 import org.jdesktop.swingx.JXTable;
 import org.jdesktop.swingx.table.TableColumnExt;
+
 import storybook.SbApp;
 import storybook.SbConstants.ViewName;
 import storybook.model.hbn.entity.Internal;

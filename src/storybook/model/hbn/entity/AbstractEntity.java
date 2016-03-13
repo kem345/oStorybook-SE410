@@ -28,6 +28,7 @@ import javax.swing.Icon;
 import javax.swing.ImageIcon;
 
 import org.hibernate.proxy.HibernateProxyHelper;
+
 import storybook.toolkit.html.HtmlUtil;
 
 public abstract class AbstractEntity implements Serializable {

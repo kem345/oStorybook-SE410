@@ -29,10 +29,9 @@ import javax.swing.ButtonGroup;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 
+import net.miginfocom.swing.MigLayout;
 import storybook.toolkit.swing.SwingUtil;
 import storybook.ui.RadioButtonGroup;
-
-import net.miginfocom.swing.MigLayout;
 
 /**
  * @author martin
